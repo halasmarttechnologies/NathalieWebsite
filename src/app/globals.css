@@ -1,26 +1,95 @@
 @import "tailwindcss";
 
+@theme {
+  --font-serif: var(--font-cormorant), "Times New Roman", Georgia, serif;
+  --font-script: var(--font-alex-brush), "Brush Script MT", cursive;
+  --font-sans: var(--font-inter), system-ui, -apple-system, sans-serif;
+  --font-arabic: var(--font-arabic), "Traditional Arabic", serif;
+
+  --color-gold-light: #f6e6c2;
+  --color-gold-base: #c5a059;
+  --color-gold-dark: #8f6c2c;
+  --color-gold-bronze: #694d1b;
+
+  --color-champagne-100: #fbf8f2;
+  --color-champagne-200: #f5eee2;
+  --color-champagne-300: #ebe0cf;
+
+  --color-charcoal-deep: #0b0c0f;
+  --color-charcoal-card: #15161b;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f7f2eb;
+  --foreground: #2b2b2f;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+html {
+  scroll-behavior: smooth;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Luxury typography styling */
+.font-serif {
+  font-family: var(--font-cormorant), "Times New Roman", Georgia, serif;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.font-script {
+  font-family: var(--font-alex-brush), "Brush Script MT", cursive;
+}
+
+.font-sans {
+  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+}
+
+.font-arabic {
+  font-family: var(--font-arabic), "Traditional Arabic", serif;
+}
+
+/* Metallic gold gradients */
+.gold-text-shimmer {
+  background: linear-gradient(135deg, #dfba73 0%, #c5a059 40%, #edd8a6 70%, #9e7934 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-badge-bg {
+  background: linear-gradient(135deg, #f2dcaf 0%, #c5a059 45%, #deb76d 80%, #b88d3e 100%);
+}
+
+.gold-border {
+  border-color: #c5a059;
+}
+
+/* Gold rope / braided ribbon shine filter */
+.gold-ribbon-drop {
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.45)) drop-shadow(0 1px 2px rgba(197, 160, 89, 0.4));
+}
+
+/* Subtle luxury card styling */
+.luxury-card {
+  background: linear-gradient(180deg, #fbf7f0 0%, #f6f0e6 100%);
+  border: 1px solid rgba(197, 160, 89, 0.28);
+  box-shadow: 0 10px 25px -4px rgba(180, 150, 110, 0.12),
+              0 4px 8px -2px rgba(0, 0, 0, 0.04);
+}
+
+.luxury-card:hover {
+  border-color: rgba(197, 160, 89, 0.55);
+  box-shadow: 0 16px 32px -4px rgba(180, 150, 110, 0.2),
+              0 6px 12px -2px rgba(0, 0, 0, 0.06);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0d0e11;
+}
+::-webkit-scrollbar-thumb {
+  background: #473a21;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #c5a059;
 }
