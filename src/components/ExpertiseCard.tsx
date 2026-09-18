@@ -10,30 +10,30 @@ export default function ExpertiseCard({ currentLang = "en" }: ExpertiseCardProps
   return (
     <div
       id="expertise"
-      className="w-full bg-[#faf5ed]/70 backdrop-blur-[2px] border border-[#c5a059]/75 shadow-[0_4px_20px_rgba(180,150,110,0.08)] p-6 sm:p-7 rounded-none text-[#36332e]"
+      className="w-full bg-[#faf6ee]/92 backdrop-blur-xs border border-[#c5a059]/80 shadow-[0_4px_18px_rgba(150,120,70,0.08)] p-6 sm:p-7 rounded-none text-[#24221d]"
       dir={isAr ? "rtl" : "ltr"}
     >
-      <h3 className="font-serif text-2xl sm:text-[26px] text-[#1a1b1f] font-normal tracking-wide mb-3.5">
+      <h3 className="font-serif text-2xl sm:text-[26px] text-[#121110] font-normal tracking-wide mb-3.5">
         {isAr ? "مجالات الخبرة" : "Expertise"}
       </h3>
 
-      <div className="space-y-3.5 font-serif text-[13.5px] sm:text-[14px] leading-[1.6] text-[#3e3b36]">
+      <div className="space-y-3.5 font-serif text-[14px] sm:text-[14.5px] leading-[1.68] text-[#282622]">
         {/* Diagnostic Assessment Block */}
-        <p className="text-justify sm:text-left">
+        <p className="text-left rtl:text-right">
           {isAr
             ? "التقييم التشخيصي وعلاج اضطرابات المزاج والقلق، الوسواس القهري، الاكتئاب، الاضطراب ثنائي القطب، الصدمات واضطراب ما بعد الصدمة (PTSD)، الصعوبات المتعلقة بالشخصية، عدم التنظيم العاطفي، الإدمان والسلوكيات القهرية، والاهتمامات المتعلقة بالتنوع العصبي — بما في ذلك التوحد واضطراب فرط الحركة وتشتت الانتباه (ADHD) — وصعوبات العلاقات المعقدة."
             : "Diagnostic Assessment and Treatment of Mood and Anxiety Disorders, OCD, Depression, Bipolar Disorder, Trauma and PTSD, Personality-Related Difficulties, Emotional Dysregulation, Addictions and Compulsive Behaviours, Neurodivergence-Related Concerns—including Autism and ADHD—and Complex Relationship Difficulties."}
         </p>
 
         {/* Therapy Modalities Block */}
-        <p className="text-justify sm:text-left">
+        <p className="text-left rtl:text-right">
           {isAr
             ? "العلاج النفسي الفردي والجماعي، استشارات الأزواج والزواج، والعلاج الأسري."
             : "Individual and Group Psychotherapy, Couples and Marriage Counselling, and Family Therapy."}
         </p>
 
         {/* Solution Focused Block */}
-        <p className="text-justify sm:text-left">
+        <p className="text-left rtl:text-right">
           {isAr
             ? "استشارات قائمة على الحلول للتحديات الشخصية والمهنية، والإرشاد المهني والوظيفي."
             : "Solution-Focused Counselling for Personal and Work-Related Challenges, and Vocational and Career Counselling."}
@@ -42,4 +42,5 @@ export default function ExpertiseCard({ currentLang = "en" }: ExpertiseCardProps
     </div>
   );
 }
+
 
