@@ -16,12 +16,12 @@ export default function HeroSection({ currentLang: propLang }: HeroSectionProps)
   return (
     <section
       id="home"
-      className="relative z-10 w-full pt-1 sm:pt-2 md:pt-3 pb-4 px-4 sm:px-8 lg:px-12"
+      className="relative z-10 w-full pt-5 sm:pt-7 md:pt-9 pb-4 px-4 sm:px-8 lg:px-12"
       dir={isAr ? "rtl" : "ltr"}
     >
       <div className="max-w-[1240px] mx-auto">
-        {/* Upper Script Calligraphy Quote - Exactly as in Mockup */}
-        <div className="text-center mb-6 sm:mb-8 select-none">
+        {/* Upper Script Calligraphy Quote - Positioned gracefully lower in the ivory curve */}
+        <div className="text-center mb-8 sm:mb-11 md:mb-12 select-none">
           <p className="font-script text-[30px] sm:text-[36px] lg:text-[40px] text-[#2b2a26] tracking-wide leading-tight">
             {isAr ? "حضورك هو أثمن هدية" : "The Gift Of Presence is"}
           </p>
