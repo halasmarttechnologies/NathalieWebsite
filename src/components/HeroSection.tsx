@@ -16,12 +16,12 @@ export default function HeroSection({ currentLang: propLang }: HeroSectionProps)
   return (
     <section
       id="home"
-      className="relative z-10 w-full pt-5 sm:pt-7 md:pt-9 pb-4 px-4 sm:px-8 lg:px-12"
+      className="relative z-10 w-full pt-10 sm:pt-14 md:pt-16 lg:pt-20 pb-4 px-4 sm:px-8 lg:px-12"
       dir={isAr ? "rtl" : "ltr"}
     >
       <div className="max-w-[1240px] mx-auto">
-        {/* Upper Script Calligraphy Quote - Positioned gracefully lower in the ivory curve */}
-        <div className="text-center mb-8 sm:mb-11 md:mb-12 select-none">
+        {/* Upper Script Calligraphy Quote - Positioned distinctly lower in the ivory scoop */}
+        <div className="text-center mb-12 sm:mb-16 md:mb-20 lg:mb-24 select-none">
           <p className="font-script text-[30px] sm:text-[36px] lg:text-[40px] text-[#2b2a26] tracking-wide leading-tight">
             {isAr ? "حضورك هو أثمن هدية" : "The Gift Of Presence is"}
           </p>
@@ -34,10 +34,10 @@ export default function HeroSection({ currentLang: propLang }: HeroSectionProps)
           </div>
         </div>
 
-        {/* Two-Column Editorial Grid - Exact Proportions from Design */}
+        {/* Two-Column Editorial Grid - Pushed lower with substantial breathing room */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-start">
           {/* Left Column: Clinical Biography & Qualifications - Directly on Ivory Background */}
-          <div className="lg:col-span-7 flex flex-col justify-start">
+          <div className="lg:col-span-7 flex flex-col justify-start mt-2 sm:mt-4 lg:mt-6">
             {/* "MEET" Label */}
             <div className="mb-0.5">
               <span className="font-serif text-[12px] uppercase tracking-[0.45em] text-[#4d473f] font-semibold">
