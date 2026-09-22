@@ -7,10 +7,9 @@ import HeroSection from "@/components/HeroSection";
 import ServiceCards from "@/components/ServiceCards";
 import BookingModal from "@/components/BookingModal";
 import Footer from "@/components/Footer";
-import { useLanguage } from "@/context/LanguageContext";
 
 export default function Home() {
-  const { currentLang, toggleLang, isAr } = useLanguage();
+  const [currentLang, setCurrentLang] = useState<"en" | "ar">("en");
   const [isBookingOpen, setIsBookingOpen] = useState(false);
   const [selectedService, setSelectedService] = useState("Individual Therapy");
 
@@ -24,9 +23,9 @@ export default function Home() {
   return (
     <main
       className="relative min-h-screen w-full flex flex-col justify-between overflow-x-hidden"
-      dir={isAr ? "rtl" : "ltr"}
+      dir={currentLang === "ar" ? "rtl" : "ltr"}
     >
-      {/* Dynamic Clean Luxury Background */}
+      {/* Dynamic Luxury Background with Sculptural Waves & Braided Gold Ribbons */}
       <LuxuryBackground />
 
       {/* Main Page Layout Container */}
@@ -34,7 +33,7 @@ export default function Home() {
         {/* Navigation Bar */}
         <Navbar
           currentLang={currentLang}
-          onToggleLang={toggleLang}
+          onToggleLang={(lang) => setCurrentLang(lang)}
           onOpenBooking={() => handleOpenBooking("General Consultation")}
         />
 
@@ -68,3 +67,5 @@ export default function Home() {
     </main>
   );
 }
+
+

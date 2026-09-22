@@ -2,36 +2,29 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
-import { useLanguage } from "@/context/LanguageContext";
 
 interface NavbarProps {
-  currentLang?: "en" | "ar";
-  onToggleLang?: (lang: "en" | "ar") => void;
+  currentLang: "en" | "ar";
+  onToggleLang: (lang: "en" | "ar") => void;
   onOpenBooking?: () => void;
 }
 
 export default function Navbar({
-  currentLang: propLang,
-  onToggleLang: propToggleLang,
+  currentLang,
+  onToggleLang,
   onOpenBooking,
 }: NavbarProps) {
-  const contextLang = useLanguage();
-  const currentLang = propLang || contextLang.currentLang;
-  const toggleLang = propToggleLang || contextLang.toggleLang;
-  const isAr = currentLang === "ar";
-  const pathname = usePathname();
-
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [activeNav, setActiveNav] = useState("HOME");
 
   const navLinks = [
-    { label: "HOME", href: "/" },
-    { label: "Services", href: "/services" },
-    { label: "Disorders", href: "/disorders" },
-    { label: "Library", href: "/library" },
-    { label: "Contact", href: "/contact" },
-    { label: "Book A Session", href: "/book", isAction: true },
+    { label: "HOME", href: "#home" },
+    { label: "Services", href: "#services" },
+    { label: "Disorders", href: "#expertise" },
+    { label: "Library", href: "#library" },
+    { label: "Contact", href: "#contact" },
+    { label: "Book A Session", href: "#book", isAction: true },
   ];
 
   return (
@@ -47,7 +40,7 @@ export default function Navbar({
           </span>
         </Link>
 
-        {/* Desktop Navigation Links - Exact Original Layout */}
+        {/* Desktop Navigation Links */}
         <nav className="hidden lg:flex items-center space-x-7 xl:space-x-9">
           {navLinks.map((item) => {
             if (item.isAction) {
@@ -62,15 +55,12 @@ export default function Navbar({
               );
             }
 
-            const isActive =
-              item.href === "/"
-                ? pathname === "/"
-                : pathname?.startsWith(item.href);
-
+            const isActive = activeNav === item.label;
             return (
-              <Link
+              <a
                 key={item.label}
                 href={item.href}
+                onClick={() => setActiveNav(item.label)}
                 className={`relative font-serif text-[14.5px] tracking-wider transition-all duration-200 py-1.5 drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)] ${
                   isActive
                     ? "text-[#ffffff] font-medium"
@@ -81,7 +71,7 @@ export default function Navbar({
                 {isActive && (
                   <span className="absolute -bottom-0.5 left-0 right-0 h-[1.5px] bg-[#e5be70] shadow-[0_0_8px_rgba(229,190,112,0.8)]" />
                 )}
-              </Link>
+              </a>
             );
           })}
         </nav>
@@ -91,8 +81,8 @@ export default function Navbar({
           {/* Exact Dual Pill Language Switcher */}
           <div className="flex flex-col rounded-[3px] overflow-hidden border border-[#d4af62] shadow-[0_2px_8px_rgba(0,0,0,0.6)] w-[68px] sm:w-[74px] select-none">
             <button
-              onClick={() => toggleLang("en")}
-              className={`py-1 text-center font-serif text-[12px] tracking-wider transition-all duration-200 cursor-pointer ${
+              onClick={() => onToggleLang("en")}
+              className={`py-1 text-center font-serif text-[12px] tracking-wider transition-all duration-200 ${
                 currentLang === "en"
                   ? "bg-gradient-to-r from-[#e7cca1] via-[#d4af62] to-[#bc9242] text-[#121110] font-bold shadow-inner"
                   : "bg-[#16171d] text-[#e0dad0] hover:text-white"
@@ -101,8 +91,8 @@ export default function Navbar({
               English
             </button>
             <button
-              onClick={() => toggleLang("ar")}
-              className={`py-1 text-center font-serif text-[12px] tracking-wider border-t border-[#d4af62]/40 transition-all duration-200 cursor-pointer ${
+              onClick={() => onToggleLang("ar")}
+              className={`py-1 text-center font-serif text-[12px] tracking-wider border-t border-[#d4af62]/40 transition-all duration-200 ${
                 currentLang === "ar"
                   ? "bg-gradient-to-r from-[#e7cca1] via-[#d4af62] to-[#bc9242] text-[#121110] font-bold shadow-inner"
                   : "bg-[#0b0c10] text-[#ded9ce] hover:text-[#e5be70]"
@@ -127,20 +117,20 @@ export default function Navbar({
       {mobileMenuOpen && (
         <div className="lg:hidden mt-3 p-5 rounded-xl bg-[#0e0f14]/98 backdrop-blur-xl border border-[#d4af62]/40 shadow-2xl flex flex-col space-y-3 animate-in fade-in slide-in-from-top-2">
           {navLinks.map((item) => (
-            <Link
+            <a
               key={item.label}
               href={item.href}
               onClick={(e) => {
-                if (item.isAction && onOpenBooking) {
+                if (item.isAction) {
                   e.preventDefault();
-                  onOpenBooking();
+                  onOpenBooking?.();
                 }
                 setMobileMenuOpen(false);
               }}
               className="font-serif text-[16.5px] text-[#f2ede4] hover:text-[#e5be70] py-2 border-b border-white/10 transition-colors tracking-wide"
             >
               {item.label}
-            </Link>
+            </a>
           ))}
         </div>
       )}

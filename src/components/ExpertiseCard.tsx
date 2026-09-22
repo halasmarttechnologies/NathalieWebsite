@@ -42,3 +42,5 @@ export default function ExpertiseCard({ currentLang = "en" }: ExpertiseCardProps
     </div>
   );
 }
+
+

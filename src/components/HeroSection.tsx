@@ -3,15 +3,13 @@
 import React from "react";
 import Image from "next/image";
 import ExpertiseCard from "./ExpertiseCard";
-import { useLanguage } from "@/context/LanguageContext";
 
 interface HeroSectionProps {
   currentLang?: "en" | "ar";
 }
 
-export default function HeroSection({ currentLang: propLang }: HeroSectionProps) {
-  const contextLang = useLanguage();
-  const isAr = (propLang || contextLang.currentLang) === "ar";
+export default function HeroSection({ currentLang = "en" }: HeroSectionProps) {
+  const isAr = currentLang === "ar";
 
   return (
     <section
@@ -20,7 +18,7 @@ export default function HeroSection({ currentLang: propLang }: HeroSectionProps)
       dir={isAr ? "rtl" : "ltr"}
     >
       <div className="max-w-[1240px] mx-auto">
-        {/* Upper Script Calligraphy Quote - Exactly the original style with WHITE text */}
+        {/* Upper Script Calligraphy Quote */}
         <div className="text-center mb-6 sm:mb-9 select-none">
           <p className="font-script text-3xl sm:text-4xl lg:text-[44px] text-white tracking-wide leading-tight drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
             {isAr ? "حضورك هو أثمن هدية" : "The Gift Of Presence is"}
@@ -88,7 +86,7 @@ export default function HeroSection({ currentLang: propLang }: HeroSectionProps)
 
               <p>
                 {isAr
-                  ? "انطلاقاً من إيمانها بأن البحث عن المعنى جزء أساسي من العملية العلاجية، ترتكز ممارستها الإكلينيكية على العلاج النفسي الوجودي وتسترشد بنهج الاستقصاء العطوف. يرشد التعاطف والفضول مسار الاستكشاف لما وراء الأعراض إلى العواطف، المعتقدات، تجارب الحياة، والأنماط اللاواعية التي قد تصوغ التحديات الراهنة—فاتحةً الطريق نحو ووضوح أكبر، وحرية عاطفية، وتغيير هادف."
+                  ? "انطلاقاً من إيمانها بأن البحث عن المعنى جزء أساسي من العملية العلاجية، ترتكز ممارستها الإكلينيكية على العلاج النفسي الوجودي وتسترشد بنهج الاستقصاء العطوف. يرشد التعاطف والفضول مسار الاستكشاف لما وراء الأعراض إلى العواطف، المعتقدات، تجارب الحياة، والأنماط اللاواعية التي قد تصوغ التحديات الراهنة—فاتحةً الطريق نحو وضوح أكبر، وحرية عاطفية، وتغيير هادف."
                   : "Believing that the search for meaning is an essential part of the therapeutic process, Nathalie's clinical practice is rooted in Existential Psychotherapy and informed by Compassionate Inquiry. Compassion and curiosity guide the exploration beyond symptoms to the emotions, beliefs, life experiences, and unconscious patterns that may be shaping a person's present difficulties—opening the way toward greater clarity, emotional freedom, and meaningful change."}
               </p>
 
@@ -116,7 +114,7 @@ export default function HeroSection({ currentLang: propLang }: HeroSectionProps)
 
             {/* Expertise Box (Aligned with Portrait width) */}
             <div className="w-full max-w-[380px]">
-              <ExpertiseCard currentLang={isAr ? "ar" : "en"} />
+              <ExpertiseCard currentLang={currentLang} />
             </div>
           </div>
         </div>
@@ -124,3 +122,4 @@ export default function HeroSection({ currentLang: propLang }: HeroSectionProps)
     </section>
   );
 }
+

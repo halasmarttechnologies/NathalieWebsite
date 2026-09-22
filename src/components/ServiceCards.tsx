@@ -3,7 +3,6 @@
 import React from "react";
 import Image from "next/image";
 import { ArrowRight, ArrowLeft } from "lucide-react";
-import { useLanguage } from "@/context/LanguageContext";
 
 interface ServiceCardsProps {
   currentLang?: "en" | "ar";
@@ -11,11 +10,10 @@ interface ServiceCardsProps {
 }
 
 export default function ServiceCards({
-  currentLang: propLang,
+  currentLang = "en",
   onSelectService,
 }: ServiceCardsProps) {
-  const contextLang = useLanguage();
-  const isAr = (propLang || contextLang.currentLang) === "ar";
+  const isAr = currentLang === "ar";
 
   const services = [
     {
@@ -104,3 +102,5 @@ export default function ServiceCards({
     </section>
   );
 }
+
+
