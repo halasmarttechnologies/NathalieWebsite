@@ -58,28 +58,48 @@ export default function Footer({
             </h5>
             <ul className="space-y-2.5 font-serif text-[14.5px] text-[#ded9cf]">
               <li>
-                <Link href="#home" className="hover:text-[#e3ba6d] transition-colors inline-flex items-center space-x-1 rtl:space-x-reverse py-0.5">
+                <Link href="/" className="hover:text-[#e3ba6d] transition-colors inline-flex items-center space-x-1 rtl:space-x-reverse py-0.5">
                   <span>{isAr ? "الرئيسية" : "Home"}</span>
                 </Link>
               </li>
               <li>
-                <Link href="#services" className="hover:text-[#e3ba6d] transition-colors inline-flex items-center space-x-1 rtl:space-x-reverse py-0.5">
+                <Link href="/services" className="hover:text-[#e3ba6d] transition-colors inline-flex items-center space-x-1 rtl:space-x-reverse py-0.5">
                   <span>{isAr ? "الخدمات العلاجية" : "Therapy Services"}</span>
                 </Link>
               </li>
               <li>
-                <Link href="#expertise" className="hover:text-[#e3ba6d] transition-colors inline-flex items-center space-x-1 rtl:space-x-reverse py-0.5">
+                <Link href="/disorders" className="hover:text-[#e3ba6d] transition-colors inline-flex items-center space-x-1 rtl:space-x-reverse py-0.5">
                   <span>{isAr ? "مجالات الخبرة" : "Clinical Expertise"}</span>
                 </Link>
               </li>
               <li>
-                <button
-                  onClick={onOpenBooking}
-                  className="hover:text-[#e3ba6d] transition-colors cursor-pointer text-left rtl:text-right inline-flex items-center space-x-1 rtl:space-x-reverse py-0.5 text-[#e5be70] font-medium"
-                >
-                  <span>{isAr ? "حجز جلسة استشارية" : "Book A Session"}</span>
-                  <ArrowUpRight className="w-3.5 h-3.5" />
-                </button>
+                <Link href="/library" className="hover:text-[#e3ba6d] transition-colors inline-flex items-center space-x-1 rtl:space-x-reverse py-0.5">
+                  <span>{isAr ? "المكتبة" : "Library"}</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="hover:text-[#e3ba6d] transition-colors inline-flex items-center space-x-1 rtl:space-x-reverse py-0.5">
+                  <span>{isAr ? "تواصل معنا" : "Contact"}</span>
+                </Link>
+              </li>
+              <li>
+                {onOpenBooking ? (
+                  <button
+                    onClick={onOpenBooking}
+                    className="hover:text-[#e3ba6d] transition-colors cursor-pointer text-left rtl:text-right inline-flex items-center space-x-1 rtl:space-x-reverse py-0.5 text-[#e5be70] font-medium"
+                  >
+                    <span>{isAr ? "حجز جلسة استشارية" : "Book A Session"}</span>
+                    <ArrowUpRight className="w-3.5 h-3.5" />
+                  </button>
+                ) : (
+                  <Link
+                    href="/book"
+                    className="hover:text-[#e3ba6d] transition-colors text-left rtl:text-right inline-flex items-center space-x-1 rtl:space-x-reverse py-0.5 text-[#e5be70] font-medium"
+                  >
+                    <span>{isAr ? "حجز جلسة استشارية" : "Book A Session"}</span>
+                    <ArrowUpRight className="w-3.5 h-3.5" />
+                  </Link>
+                )}
               </li>
             </ul>
           </div>

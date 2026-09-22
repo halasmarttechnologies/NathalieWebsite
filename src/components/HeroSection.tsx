@@ -3,39 +3,41 @@
 import React from "react";
 import Image from "next/image";
 import ExpertiseCard from "./ExpertiseCard";
+import { useLanguage } from "@/context/LanguageContext";
 
 interface HeroSectionProps {
   currentLang?: "en" | "ar";
 }
 
-export default function HeroSection({ currentLang = "en" }: HeroSectionProps) {
-  const isAr = currentLang === "ar";
+export default function HeroSection({ currentLang: propLang }: HeroSectionProps) {
+  const contextLang = useLanguage();
+  const isAr = (propLang || contextLang.currentLang) === "ar";
 
   return (
     <section
       id="home"
-      className="relative z-10 w-full pt-4 sm:pt-6 md:pt-8 pb-4 px-4 sm:px-8 lg:px-12"
+      className="relative z-10 w-full pt-4 sm:pt-6 md:pt-8 pb-6 px-4 sm:px-8 lg:px-12"
       dir={isAr ? "rtl" : "ltr"}
     >
       <div className="max-w-[1240px] mx-auto">
-        {/* Upper Script Calligraphy Quote */}
-        <div className="text-center mb-6 sm:mb-9 select-none">
-          <p className="font-script text-3xl sm:text-4xl lg:text-[44px] text-white tracking-wide leading-tight drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+        {/* Upper Script Calligraphy Quote - BLACK text on desktop and mobile */}
+        <div className="text-center mb-8 sm:mb-10 select-none">
+          <p className="font-script text-3xl sm:text-4xl lg:text-[46px] text-[#121110] tracking-wide leading-tight drop-shadow-[0_1px_1px_rgba(255,255,255,0.9)]">
             {isAr ? "حضورك هو أثمن هدية" : "The Gift Of Presence is"}
           </p>
           <div className="inline-block relative">
-            <p className="font-script text-3xl sm:text-4xl lg:text-[44px] text-white tracking-wide leading-tight mt-0.5 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+            <p className="font-script text-3xl sm:text-4xl lg:text-[46px] text-[#121110] tracking-wide leading-tight mt-0.5 drop-shadow-[0_1px_1px_rgba(255,255,255,0.9)]">
               {isAr ? "أجمل ما يمكن تقديمه" : "The Best Present"}
             </p>
             {/* Delicate Gold Underline */}
-            <div className="w-4/5 mx-auto h-[1.5px] bg-[#c5a059] mt-1 shadow-sm" />
+            <div className="w-4/5 mx-auto h-[1.5px] bg-[#c5a059] mt-2 shadow-xs" />
           </div>
         </div>
 
         {/* Two-Column Editorial Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-11 items-start">
-          {/* Left Column: Clinical Biography & Qualifications (7 cols) */}
-          <div className="lg:col-span-7 flex flex-col justify-start">
+          {/* Left Column: Clinical Biography & Qualifications - 100% Clean Background */}
+          <div className="lg:col-span-7 flex flex-col justify-start bg-[#faf6ee]/96 backdrop-blur-md p-6 sm:p-9 rounded-2xl border border-[#c5a059]/40 shadow-[0_8px_30px_rgba(150,120,70,0.08)]">
             {/* "MEET" Label */}
             <div className="mb-1">
               <span className="font-serif text-[13px] uppercase tracking-[0.45em] text-[#4d473f] font-semibold">
@@ -54,7 +56,7 @@ export default function HeroSection({ currentLang = "en" }: HeroSectionProps) {
             </h2>
 
             {/* Qualifications / Credentials */}
-            <div className="mt-4 mb-5 space-y-1 font-serif text-[14.5px] sm:text-[15.5px] text-[#1f1d19] font-medium leading-snug">
+            <div className="mt-4 mb-5 space-y-1 font-serif text-[14.5px] sm:text-[15.5px] text-[#1f1d19] font-medium leading-snug pb-3 border-b border-[#c5a059]/25">
               <p>
                 {isAr
                   ? "أخصائية نفسية مرخصة من هيئة تنمية المجتمع في دبي (CDA)"
@@ -70,8 +72,8 @@ export default function HeroSection({ currentLang = "en" }: HeroSectionProps) {
               </p>
             </div>
 
-            {/* Biography Paragraphs - Enhanced Readability */}
-            <div className="space-y-4 font-serif text-[15px] sm:text-[15.5px] leading-[1.75] sm:leading-[1.8] text-[#22201c] text-left rtl:text-right">
+            {/* Biography Paragraphs - Neat, Clean & High Legibility */}
+            <div className="space-y-4 font-serif text-[15px] sm:text-[15.5px] leading-[1.8] text-[#22201c] text-left rtl:text-right">
               <p>
                 {isAr
                   ? "نشأت ناتالي روزنبلوم متأثرة بجذورها الأوروبية والشرق أوسطية ضمن النسيج الثقافي للتقاليد العربية والحياة الأسرية. واصلت لاحقاً تعليمها وتدريبها الإكلينيكي في أمريكا الشمالية، حيث حصلت على درجة الماجستير في علم النفس الإكلينيكي من جامعة كابيلا في مينيسوتا بالولايات المتحدة الأمريكية، ومعترف بها من قبل الجمعية الأمريكية لعلم النفس (APA). ناتالي أيضاً عضو في الجمعية الكندية للإرشاد والعلاج النفسي (CCPA)."
@@ -114,7 +116,7 @@ export default function HeroSection({ currentLang = "en" }: HeroSectionProps) {
 
             {/* Expertise Box (Aligned with Portrait width) */}
             <div className="w-full max-w-[380px]">
-              <ExpertiseCard currentLang={currentLang} />
+              <ExpertiseCard currentLang={isAr ? "ar" : "en"} />
             </div>
           </div>
         </div>
@@ -122,4 +124,3 @@ export default function HeroSection({ currentLang = "en" }: HeroSectionProps) {
     </section>
   );
 }
-
