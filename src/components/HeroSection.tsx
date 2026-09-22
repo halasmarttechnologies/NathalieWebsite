@@ -20,13 +20,13 @@ export default function HeroSection({ currentLang: propLang }: HeroSectionProps)
       dir={isAr ? "rtl" : "ltr"}
     >
       <div className="max-w-[1240px] mx-auto">
-        {/* Upper Script Calligraphy Quote - White on phone view, Black on desktop */}
+        {/* Upper Script Calligraphy Quote - Crisp Luxury Black on Clean Canvas */}
         <div className="text-center mb-8 sm:mb-10 select-none">
-          <p className="font-script text-3xl sm:text-4xl lg:text-[46px] text-white md:text-[#121110] tracking-wide leading-tight drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)] md:drop-shadow-[0_1px_1px_rgba(255,255,255,0.9)]">
+          <p className="font-script text-3xl sm:text-4xl lg:text-[46px] text-[#121110] tracking-wide leading-tight">
             {isAr ? "حضورك هو أثمن هدية" : "The Gift Of Presence is"}
           </p>
           <div className="inline-block relative">
-            <p className="font-script text-3xl sm:text-4xl lg:text-[46px] text-white md:text-[#121110] tracking-wide leading-tight mt-0.5 drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)] md:drop-shadow-[0_1px_1px_rgba(255,255,255,0.9)]">
+            <p className="font-script text-3xl sm:text-4xl lg:text-[46px] text-[#121110] tracking-wide leading-tight mt-0.5">
               {isAr ? "أجمل ما يمكن تقديمه" : "The Best Present"}
             </p>
             {/* Delicate Gold Underline */}
@@ -37,7 +37,7 @@ export default function HeroSection({ currentLang: propLang }: HeroSectionProps)
         {/* Two-Column Editorial Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-11 items-start">
           {/* Left Column: Clinical Biography & Qualifications - 100% Clean Background */}
-          <div className="lg:col-span-7 flex flex-col justify-start bg-[#faf6ee]/96 backdrop-blur-md p-6 sm:p-9 rounded-2xl border border-[#c5a059]/40 shadow-[0_8px_30px_rgba(150,120,70,0.08)]">
+          <div className="lg:col-span-7 flex flex-col justify-start bg-white/95 backdrop-blur-md p-6 sm:p-9 rounded-2xl border border-[#c5a059]/45 shadow-[0_10px_32px_rgba(150,120,70,0.08)]">
             {/* "MEET" Label */}
             <div className="mb-1">
               <span className="font-serif text-[13px] uppercase tracking-[0.45em] text-[#4d473f] font-semibold">
@@ -102,16 +102,18 @@ export default function HeroSection({ currentLang: propLang }: HeroSectionProps)
 
           {/* Right Column: Portrait Photo & Expertise Box (5 cols) */}
           <div className="lg:col-span-5 flex flex-col items-center lg:items-end space-y-5 w-full max-w-[420px] mx-auto lg:max-w-none">
-            {/* Framed Portrait - Exact Photo and Proportion */}
-            <div className="relative w-full aspect-[274/326] max-w-[380px] border border-[#c5a059] shadow-md bg-[#1a1b20] overflow-hidden group">
-              <Image
-                src="/images/nathalie-rosenblum.jpg"
-                alt="Nathalie Rosenblum - CDA Licensed Psychologist in Dubai"
-                fill
-                priority
-                sizes="(max-width: 768px) 100vw, 380px"
-                className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
-              />
+            {/* Framed Portrait - Clean Luxury Border */}
+            <div className="relative w-full aspect-[274/326] max-w-[380px] p-2 bg-white/90 rounded-2xl border-2 border-[#c5a059] shadow-[0_10px_32px_rgba(150,120,70,0.12)] overflow-hidden group">
+              <div className="relative w-full h-full rounded-xl overflow-hidden border border-[#c5a059]/30">
+                <Image
+                  src="/images/nathalie-rosenblum.jpg"
+                  alt="Nathalie Rosenblum - CDA Licensed Psychologist in Dubai"
+                  fill
+                  priority
+                  sizes="(max-width: 768px) 100vw, 380px"
+                  className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
+                />
+              </div>
             </div>
 
             {/* Expertise Box (Aligned with Portrait width) */}

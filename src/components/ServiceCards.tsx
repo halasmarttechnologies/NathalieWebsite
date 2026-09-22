@@ -55,7 +55,7 @@ export default function ServiceCards({
           <div
             key={item.id}
             onClick={() => onSelectService?.(item.title)}
-            className="group relative bg-[#faf6ee] border border-[#e5dbc9] hover:border-[#c5a059] rounded-2xl p-7 sm:p-8 flex flex-col items-center justify-between text-center transition-all duration-300 shadow-[0_6px_20px_rgba(150,120,80,0.08)] hover:shadow-[0_12px_28px_rgba(150,120,80,0.18)] hover:-translate-y-1 cursor-pointer min-h-[275px]"
+            className="group relative bg-white/95 backdrop-blur-md border border-[#c5a059]/45 hover:border-[#c5a059] rounded-2xl p-7 sm:p-8 flex flex-col items-center justify-between text-center transition-all duration-300 shadow-[0_8px_24px_rgba(150,120,70,0.08)] hover:shadow-[0_16px_36px_rgba(150,120,70,0.16)] hover:-translate-y-1 cursor-pointer min-h-[275px]"
             dir={isAr ? "rtl" : "ltr"}
           >
             {/* Exact Line-Art Icon */}
@@ -71,14 +71,14 @@ export default function ServiceCards({
 
             {/* Title & Centered Gold Underline */}
             <div className="flex flex-col items-center mb-1">
-              <h3 className="font-serif text-[22px] sm:text-[23px] font-normal text-[#1a1a1a] tracking-normal group-hover:text-[#9e7631] transition-colors">
+              <h3 className="font-serif text-[22px] sm:text-[23px] font-normal text-[#121110] tracking-normal group-hover:text-[#9e7631] transition-colors">
                 {item.title}
               </h3>
               <div className="w-10 h-[1.2px] bg-[#c5a059] mt-2 mb-2.5" />
             </div>
 
             {/* Description */}
-            <p className="font-serif text-[13.5px] leading-[1.55] text-[#444039] max-w-[270px] mb-5 flex-grow">
+            <p className="font-serif text-[13.5px] leading-[1.6] text-[#2e2a23] max-w-[270px] mb-5 flex-grow">
               {item.description}
             </p>
 

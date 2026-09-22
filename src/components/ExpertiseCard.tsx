@@ -10,7 +10,7 @@ export default function ExpertiseCard({ currentLang = "en" }: ExpertiseCardProps
   return (
     <div
       id="expertise"
-      className="w-full bg-[#faf6ee]/92 backdrop-blur-xs border border-[#c5a059]/80 shadow-[0_4px_18px_rgba(150,120,70,0.08)] p-6 sm:p-7 rounded-none text-[#24221d]"
+      className="w-full bg-white/95 backdrop-blur-md border border-[#c5a059]/45 shadow-[0_8px_24px_rgba(150,120,70,0.08)] p-6 sm:p-7 rounded-2xl text-[#24221d]"
       dir={isAr ? "rtl" : "ltr"}
     >
       <h3 className="font-serif text-2xl sm:text-[26px] text-[#121110] font-normal tracking-wide mb-3.5">

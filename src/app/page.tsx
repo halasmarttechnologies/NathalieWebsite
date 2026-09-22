@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Navbar from "@/components/Navbar";
-import LuxuryBackground from "@/components/LuxuryBackground";
+import InnerPageBackground from "@/components/InnerPageBackground";
 import HeroSection from "@/components/HeroSection";
 import ServiceCards from "@/components/ServiceCards";
 import BookingModal from "@/components/BookingModal";
@@ -25,8 +25,8 @@ export default function Home() {
       className="relative min-h-screen w-full flex flex-col justify-between overflow-x-hidden"
       dir={currentLang === "ar" ? "rtl" : "ltr"}
     >
-      {/* Dynamic Luxury Background with Sculptural Waves & Braided Gold Ribbons */}
-      <LuxuryBackground />
+      {/* Pristine Clean Luxury Canvas */}
+      <InnerPageBackground />
 
       {/* Main Page Layout Container */}
       <div className="relative z-10 flex flex-col flex-grow">
