@@ -52,6 +52,8 @@ export const metadata: Metadata = {
   },
 };
 
+import { LanguageProvider } from "@/context/LanguageContext";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -63,7 +65,7 @@ export default function RootLayout({
       className={`${cormorant.variable} ${alexBrush.variable} ${inter.variable} ${amiri.variable} antialiased`}
     >
       <body className="min-h-screen bg-[#0d0e11] text-[#2a2a2e] font-sans selection:bg-[#c5a059]/30 selection:text-[#0b0c0e]">
-        {children}
+        <LanguageProvider>{children}</LanguageProvider>
       </body>
     </html>
   );
