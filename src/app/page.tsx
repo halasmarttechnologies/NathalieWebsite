@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import Navbar from "@/components/Navbar";
-import InnerPageBackground from "@/components/InnerPageBackground";
 import HeroSection from "@/components/HeroSection";
 import ServiceCards from "@/components/ServiceCards";
 import BookingModal from "@/components/BookingModal";
@@ -25,25 +25,37 @@ export default function Home() {
       className="relative min-h-screen w-full flex flex-col justify-between overflow-x-hidden"
       dir={currentLang === "ar" ? "rtl" : "ltr"}
     >
-      {/* Pristine Clean Luxury Canvas */}
-      <InnerPageBackground />
-
-      {/* Main Page Layout Container */}
-      <div className="relative z-10 flex flex-col flex-grow">
-        {/* Navigation Bar */}
+      {/* Navigation Bar - Clean, separate component */}
+      <div className="relative z-20">
         <Navbar
           currentLang={currentLang}
           onToggleLang={(lang) => setCurrentLang(lang)}
           onOpenBooking={() => handleOpenBooking("General Consultation")}
         />
+      </div>
+
+      {/* Whole Landing Page Body with heroimage.png as background */}
+      <div className="relative z-10 flex flex-col flex-grow justify-between">
+        {/* Exact Clean Luxury Background Image from User */}
+        <div className="absolute inset-0 pointer-events-none select-none z-0">
+          <Image
+            src="/images/heroimage.png"
+            alt="Luxury Waves & Gold Ribbons Background"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-top"
+            quality={98}
+          />
+        </div>
 
         {/* Hero / Bio / Expertise Section */}
-        <div className="mt-1 sm:mt-3 md:mt-4">
+        <div className="relative z-10 mt-1 sm:mt-3 md:mt-4">
           <HeroSection currentLang={currentLang} />
         </div>
 
         {/* Three Pillar Service Cards */}
-        <div className="mt-1 sm:mt-2 mb-8 sm:mb-12">
+        <div className="relative z-10 mt-1 sm:mt-2 mb-8 sm:mb-12">
           <ServiceCards
             currentLang={currentLang}
             onSelectService={(service) => handleOpenBooking(service)}
@@ -52,10 +64,12 @@ export default function Home() {
       </div>
 
       {/* Clean High-Readability Luxury Footer */}
-      <Footer
-        currentLang={currentLang}
-        onOpenBooking={() => handleOpenBooking("Consultation")}
-      />
+      <div className="relative z-20">
+        <Footer
+          currentLang={currentLang}
+          onOpenBooking={() => handleOpenBooking("Consultation")}
+        />
+      </div>
 
       {/* Interactive Booking / Consultation Modal */}
       <BookingModal
