@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
-import LuxuryBackground from "@/components/LuxuryBackground";
+import InnerPageBackground from "@/components/InnerPageBackground";
 import PageHeader from "@/components/PageHeader";
 import Footer from "@/components/Footer";
 import BookingModal from "@/components/BookingModal";
@@ -269,7 +269,7 @@ export default function DisordersPage() {
       className="relative min-h-screen w-full flex flex-col justify-between overflow-x-hidden"
       dir={isAr ? "rtl" : "ltr"}
     >
-      <LuxuryBackground />
+      <InnerPageBackground />
 
       <div className="relative z-10 flex flex-col flex-grow">
         <Navbar
@@ -302,7 +302,7 @@ export default function DisordersPage() {
                   className={`px-4 py-2 rounded-full font-serif text-xs sm:text-sm tracking-wide transition-all cursor-pointer ${
                     activeCategory === c.id
                       ? "bg-gradient-to-r from-[#e7cca1] via-[#d4af62] to-[#bc9242] text-[#121110] font-semibold shadow-md"
-                      : "bg-[#faf6ee]/90 border border-[#c5a059]/40 text-[#403c34] hover:border-[#c5a059] hover:text-[#121110]"
+                      : "bg-white/90 border border-[#c5a059]/40 text-[#121110] hover:border-[#c5a059] shadow-xs"
                   }`}
                 >
                   {isAr ? c.labelAr : c.labelEn}
@@ -320,7 +320,7 @@ export default function DisordersPage() {
                 placeholder={
                   isAr ? "ابحث عن حالة، اضطراب، أو عرض..." : "Search conditions or symptoms..."
                 }
-                className="w-full pl-10 pr-4 rtl:pl-4 rtl:pr-10 py-2.5 rounded-full bg-[#faf6ee] border border-[#c5a059]/50 text-sm font-serif text-[#2a2a2a] placeholder-[#8a8374] focus:outline-none focus:border-[#c5a059] shadow-xs"
+                className="w-full pl-10 pr-4 rtl:pl-4 rtl:pr-10 py-2.5 rounded-full bg-white border border-[#c5a059]/50 text-sm font-serif text-[#121110] placeholder-[#7a7467] focus:outline-none focus:border-[#c5a059] shadow-xs"
               />
             </div>
           </div>
@@ -333,7 +333,7 @@ export default function DisordersPage() {
               <div
                 key={item.id}
                 id={item.id}
-                className="p-7 sm:p-8 rounded-2xl bg-[#faf6ee]/95 backdrop-blur-md border border-[#c5a059] shadow-[0_8px_24px_rgba(150,120,70,0.1)] hover:shadow-[0_16px_36px_rgba(150,120,70,0.18)] transition-all duration-300 flex flex-col justify-between"
+                className="p-7 sm:p-8 rounded-2xl bg-white/95 backdrop-blur-md border border-[#c5a059]/45 shadow-[0_8px_24px_rgba(150,120,70,0.08)] hover:shadow-[0_16px_36px_rgba(150,120,70,0.16)] transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-center justify-between gap-2 mb-2">

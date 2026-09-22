@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
-import LuxuryBackground from "@/components/LuxuryBackground";
+import InnerPageBackground from "@/components/InnerPageBackground";
 import PageHeader from "@/components/PageHeader";
 import Footer from "@/components/Footer";
 import { useLanguage } from "@/context/LanguageContext";
@@ -87,7 +87,7 @@ export default function BookPage() {
       className="relative min-h-screen w-full flex flex-col justify-between overflow-x-hidden"
       dir={isAr ? "rtl" : "ltr"}
     >
-      <LuxuryBackground />
+      <InnerPageBackground />
 
       <div className="relative z-10 flex flex-col flex-grow">
         <Navbar currentLang={currentLang} onToggleLang={toggleLang} />
@@ -106,7 +106,7 @@ export default function BookPage() {
 
         {/* Main Booking Container */}
         <section className="relative z-10 py-10 px-4 sm:px-8 lg:px-12">
-          <div className="max-w-[860px] mx-auto bg-[#faf6ee]/95 backdrop-blur-md border border-[#c5a059] rounded-2xl shadow-[0_16px_48px_rgba(150,120,70,0.15)] overflow-hidden">
+          <div className="max-w-[860px] mx-auto bg-white/95 backdrop-blur-md border border-[#c5a059]/45 rounded-2xl shadow-[0_12px_40px_rgba(150,120,70,0.1)] overflow-hidden">
             {/* Top Gold Progress Ribbon */}
             <div className="bg-[#12131a] px-6 sm:px-10 py-4 border-b border-[#c5a059]/40 flex items-center justify-between text-xs font-serif text-[#ded9cd]">
               <div className="flex items-center space-x-2 rtl:space-x-reverse">

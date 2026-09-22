@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
-import LuxuryBackground from "@/components/LuxuryBackground";
+import InnerPageBackground from "@/components/InnerPageBackground";
 import PageHeader from "@/components/PageHeader";
 import Footer from "@/components/Footer";
 import BookingModal from "@/components/BookingModal";
@@ -118,7 +118,7 @@ export default function AboutPage() {
       className="relative min-h-screen w-full flex flex-col justify-between overflow-x-hidden"
       dir={isAr ? "rtl" : "ltr"}
     >
-      <LuxuryBackground />
+      <InnerPageBackground />
 
       <div className="relative z-10 flex flex-col flex-grow">
         <Navbar
@@ -234,7 +234,7 @@ export default function AboutPage() {
         </section>
 
         {/* Evidence-Informed Modalities Grid */}
-        <section className="relative z-10 py-16 px-4 sm:px-8 lg:px-12">
+        <section className="relative z-10 py-16 sm:py-20 px-4 sm:px-8 lg:px-12 bg-[#f6efe2]/80 border-b border-[#c5a059]/25">
           <div className="max-w-[1180px] mx-auto">
             <div className="text-center max-w-2xl mx-auto mb-12">
               <span className="font-serif text-xs uppercase tracking-[0.25em] text-[#936227] font-semibold">
@@ -243,7 +243,7 @@ export default function AboutPage() {
               <h2 className="font-serif text-3xl sm:text-4xl text-[#121110] font-normal mt-1">
                 {isAr ? "أساليب علاجية مدعومة بالأبحاث العلمية" : "Evidence-Informed Approaches"}
               </h2>
-              <p className="font-serif text-sm sm:text-base text-[#4d483e] mt-2">
+              <p className="font-serif text-sm sm:text-base text-[#38332a] mt-2">
                 {isAr
                   ? "يتم تصميم كل خطة علاجية بصورة فردية ومخصصة لتلائم احتياجاتك النفسية وتطلعاتك الشخصية."
                   : "Every therapeutic plan is tailored specifically to your unique lived experience, goals, and emotional landscape."}
@@ -254,15 +254,15 @@ export default function AboutPage() {
               {modalities.map((item, idx) => (
                 <div
                   key={idx}
-                  className="p-6 rounded-xl bg-[#faf6ee] border border-[#e5dbc9] hover:border-[#c5a059] transition-all duration-300 shadow-[0_6px_20px_rgba(150,120,80,0.08)] hover:-translate-y-1"
+                  className="p-6 rounded-xl bg-white/95 border border-[#c5a059]/35 hover:border-[#c5a059] transition-all duration-300 shadow-[0_4px_16px_rgba(150,120,80,0.06)] hover:-translate-y-0.5"
                 >
                   <div className="w-10 h-10 rounded-full bg-[#c5a059]/15 flex items-center justify-center mb-3">
                     <CheckCircle2 className="w-5 h-5 text-[#936227]" />
                   </div>
-                  <h3 className="font-serif text-[18px] text-[#1a1a1a] font-normal mb-1.5">
+                  <h3 className="font-serif text-[18px] text-[#121110] font-medium mb-1.5">
                     {isAr ? item.nameAr : item.nameEn}
                   </h3>
-                  <p className="font-serif text-xs sm:text-sm text-[#504b41] leading-relaxed">
+                  <p className="font-serif text-xs sm:text-sm text-[#3b362d] leading-relaxed">
                     {isAr ? item.descAr : item.descEn}
                   </p>
                 </div>

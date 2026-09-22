@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Navbar from "@/components/Navbar";
-import LuxuryBackground from "@/components/LuxuryBackground";
+import InnerPageBackground from "@/components/InnerPageBackground";
 import PageHeader from "@/components/PageHeader";
 import Footer from "@/components/Footer";
 import BookingModal from "@/components/BookingModal";
@@ -170,7 +170,7 @@ Accurate diagnostic assessment brings immense relief, replacing decades of self-
       className="relative min-h-screen w-full flex flex-col justify-between overflow-x-hidden"
       dir={isAr ? "rtl" : "ltr"}
     >
-      <LuxuryBackground />
+      <InnerPageBackground />
 
       <div className="relative z-10 flex flex-col flex-grow">
         <Navbar
@@ -201,7 +201,7 @@ Accurate diagnostic assessment brings immense relief, replacing decades of self-
                 className={`px-4 py-2 rounded-full font-serif text-xs sm:text-sm tracking-wide transition-all cursor-pointer ${
                   activeCategory === cat.id
                     ? "bg-gradient-to-r from-[#e7cca1] via-[#d4af62] to-[#bc9242] text-[#121110] font-semibold shadow-md"
-                    : "bg-[#faf6ee]/90 border border-[#c5a059]/40 text-[#403c34] hover:border-[#c5a059] hover:text-[#121110]"
+                    : "bg-white/90 border border-[#c5a059]/40 text-[#121110] hover:border-[#c5a059] shadow-xs"
                 }`}
               >
                 {isAr ? cat.labelAr : cat.labelEn}
@@ -217,7 +217,7 @@ Accurate diagnostic assessment brings immense relief, replacing decades of self-
               <article
                 key={art.id}
                 onClick={() => setSelectedArticle(art)}
-                className="group p-7 sm:p-8 rounded-2xl bg-[#faf6ee]/95 backdrop-blur-md border border-[#c5a059]/70 hover:border-[#c5a059] shadow-[0_8px_24px_rgba(150,120,70,0.1)] hover:shadow-[0_16px_36px_rgba(150,120,70,0.2)] transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between"
+                className="group p-7 sm:p-8 rounded-2xl bg-white/95 backdrop-blur-md border border-[#c5a059]/45 hover:border-[#c5a059] shadow-[0_8px_24px_rgba(150,120,70,0.08)] hover:shadow-[0_16px_36px_rgba(150,120,70,0.16)] transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-center space-x-3 rtl:space-x-reverse text-xs font-serif text-[#8a8374] mb-3">

@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
-import LuxuryBackground from "@/components/LuxuryBackground";
+import InnerPageBackground from "@/components/InnerPageBackground";
 import PageHeader from "@/components/PageHeader";
 import Footer from "@/components/Footer";
 import BookingModal from "@/components/BookingModal";
@@ -223,7 +223,7 @@ export default function ServicesPage() {
       className="relative min-h-screen w-full flex flex-col justify-between overflow-x-hidden"
       dir={isAr ? "rtl" : "ltr"}
     >
-      <LuxuryBackground />
+      <InnerPageBackground />
 
       <div className="relative z-10 flex flex-col flex-grow">
         <Navbar
@@ -355,33 +355,33 @@ export default function ServicesPage() {
         </section>
 
         {/* Frequently Asked Questions */}
-        <section className="relative z-10 py-16 px-4 sm:px-8 lg:px-12">
+        <section className="relative z-10 py-16 sm:py-20 px-4 sm:px-8 lg:px-12 bg-[#f6efe2]/90 border-y border-[#c5a059]/25">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-10">
-              <div className="inline-flex items-center space-x-1.5 rtl:space-x-reverse px-3 py-1 rounded-full bg-[#c5a059]/15 border border-[#c5a059]/30 mb-2">
+              <div className="inline-flex items-center space-x-1.5 rtl:space-x-reverse px-3.5 py-1 rounded-full bg-[#c5a059]/15 border border-[#c5a059]/35 mb-2.5">
                 <HelpCircle className="w-3.5 h-3.5 text-[#936227]" />
-                <span className="font-serif text-xs uppercase tracking-[0.25em] text-[#936227]">
+                <span className="font-serif text-xs uppercase tracking-[0.25em] text-[#936227] font-medium">
                   {isAr ? "الأسئلة الشائعة" : "Common Inquiries"}
                 </span>
               </div>
-              <h2 className="font-serif text-3xl sm:text-4xl text-[#121110] font-normal">
+              <h2 className="font-serif text-3xl sm:text-4xl text-[#121110] font-normal tracking-tight">
                 {isAr ? "إجابات على أكثر التساؤلات تكراراً" : "Frequently Asked Questions"}
               </h2>
             </div>
 
-            <div className="space-y-4">
+            <div className="space-y-3.5">
               {faqs.map((faq, idx) => {
                 const isOpen = openFaq === idx;
                 return (
                   <div
                     key={idx}
-                    className="rounded-xl bg-[#faf6ee] border border-[#c5a059]/50 overflow-hidden shadow-xs"
+                    className="rounded-xl bg-white/95 border border-[#c5a059]/35 hover:border-[#c5a059] overflow-hidden shadow-xs transition-all duration-200"
                   >
                     <button
                       onClick={() => setOpenFaq(isOpen ? null : idx)}
-                      className="w-full p-5 text-left rtl:text-right flex items-center justify-between space-x-4 rtl:space-x-reverse font-serif text-base sm:text-lg text-[#1a1a1a] hover:text-[#936227] transition-colors focus:outline-none cursor-pointer"
+                      className="w-full p-5 text-left rtl:text-right flex items-center justify-between space-x-4 rtl:space-x-reverse font-serif text-base sm:text-lg text-[#121110] hover:text-[#936227] transition-colors focus:outline-none cursor-pointer"
                     >
-                      <span className="font-medium">{isAr ? faq.qAr : faq.qEn}</span>
+                      <span className="font-medium leading-snug">{isAr ? faq.qAr : faq.qEn}</span>
                       <ChevronDown
                         className={`w-5 h-5 text-[#936227] shrink-0 transition-transform duration-200 ${
                           isOpen ? "rotate-180" : ""
@@ -389,7 +389,7 @@ export default function ServicesPage() {
                       />
                     </button>
                     {isOpen && (
-                      <div className="px-5 pb-5 pt-1 font-serif text-sm sm:text-[15px] leading-relaxed text-[#403b32] border-t border-[#c5a059]/20">
+                      <div className="px-5 pb-5 pt-3 font-serif text-sm sm:text-[15px] leading-relaxed text-[#2c2822] bg-[#fdfcf9] border-t border-[#c5a059]/15">
                         {isAr ? faq.aAr : faq.aEn}
                       </div>
                     )}

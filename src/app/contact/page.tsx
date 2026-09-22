@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Navbar from "@/components/Navbar";
-import LuxuryBackground from "@/components/LuxuryBackground";
+import InnerPageBackground from "@/components/InnerPageBackground";
 import PageHeader from "@/components/PageHeader";
 import Footer from "@/components/Footer";
 import BookingModal from "@/components/BookingModal";
@@ -44,7 +44,7 @@ export default function ContactPage() {
       className="relative min-h-screen w-full flex flex-col justify-between overflow-x-hidden"
       dir={isAr ? "rtl" : "ltr"}
     >
-      <LuxuryBackground />
+      <InnerPageBackground />
 
       <div className="relative z-10 flex flex-col flex-grow">
         <Navbar
@@ -71,7 +71,7 @@ export default function ContactPage() {
             {/* Left Column: Clinic Details & Highlights (5 cols) */}
             <div className="lg:col-span-5 space-y-6">
               {/* Clinic Address Card */}
-              <div className="p-7 rounded-2xl bg-[#faf6ee]/95 backdrop-blur-md border border-[#c5a059] shadow-[0_8px_24px_rgba(150,120,70,0.1)] space-y-5">
+              <div className="p-7 rounded-2xl bg-white/95 backdrop-blur-md border border-[#c5a059]/45 shadow-[0_8px_24px_rgba(150,120,70,0.08)] space-y-5">
                 <h2 className="font-serif text-2xl text-[#121110] font-normal tracking-wide pb-2 border-b border-[#c5a059]/30">
                   {isAr ? "مقر العيادة وساعات العمل" : "Clinic Details & Hours"}
                 </h2>
@@ -173,7 +173,7 @@ export default function ContactPage() {
             </div>
 
             {/* Right Column: Confidential Inquiry Form (7 cols) */}
-            <div className="lg:col-span-7 bg-[#faf6ee]/95 backdrop-blur-md p-7 sm:p-9 rounded-2xl border border-[#c5a059] shadow-[0_12px_36px_rgba(150,120,70,0.12)]">
+            <div className="lg:col-span-7 bg-white/95 backdrop-blur-md p-7 sm:p-9 rounded-2xl border border-[#c5a059]/45 shadow-[0_10px_30px_rgba(150,120,70,0.1)]">
               {submitted ? (
                 <div className="py-12 text-center space-y-4">
                   <div className="w-16 h-16 mx-auto rounded-full bg-[#c5a059]/20 flex items-center justify-center text-[#936227]">
