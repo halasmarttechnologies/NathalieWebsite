@@ -20,13 +20,13 @@ export default function HeroSection({ currentLang: propLang }: HeroSectionProps)
       dir={isAr ? "rtl" : "ltr"}
     >
       <div className="max-w-[1240px] mx-auto">
-        {/* Upper Script Calligraphy Quote - Crisp Deep Luxury Black on Clean White Canvas */}
+        {/* Upper Script Calligraphy Quote - White on mobile view, Black on desktop */}
         <div className="text-center mb-8 sm:mb-10 select-none">
-          <p className="font-script text-3xl sm:text-4xl lg:text-[46px] text-[#121110] tracking-wide leading-tight">
+          <p className="font-script text-3xl sm:text-4xl lg:text-[46px] text-white md:text-[#121110] tracking-wide leading-tight drop-shadow-[0_2px_6px_rgba(0,0,0,0.85)] md:drop-shadow-none">
             {isAr ? "حضورك هو أثمن هدية" : "The Gift Of Presence is"}
           </p>
           <div className="inline-block relative">
-            <p className="font-script text-3xl sm:text-4xl lg:text-[46px] text-[#121110] tracking-wide leading-tight mt-0.5">
+            <p className="font-script text-3xl sm:text-4xl lg:text-[46px] text-white md:text-[#121110] tracking-wide leading-tight mt-0.5 drop-shadow-[0_2px_6px_rgba(0,0,0,0.85)] md:drop-shadow-none">
               {isAr ? "أجمل ما يمكن تقديمه" : "The Best Present"}
             </p>
             {/* Delicate Gold Underline */}
