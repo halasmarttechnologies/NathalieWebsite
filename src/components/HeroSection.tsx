@@ -20,13 +20,13 @@ export default function HeroSection({ currentLang: propLang }: HeroSectionProps)
       dir={isAr ? "rtl" : "ltr"}
     >
       <div className="max-w-[1240px] mx-auto">
-        {/* Upper Script Calligraphy Quote - BLACK text on desktop and mobile */}
+        {/* Upper Script Calligraphy Quote - White on phone view, Black on desktop */}
         <div className="text-center mb-8 sm:mb-10 select-none">
-          <p className="font-script text-3xl sm:text-4xl lg:text-[46px] text-[#121110] tracking-wide leading-tight drop-shadow-[0_1px_1px_rgba(255,255,255,0.9)]">
+          <p className="font-script text-3xl sm:text-4xl lg:text-[46px] text-white md:text-[#121110] tracking-wide leading-tight drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)] md:drop-shadow-[0_1px_1px_rgba(255,255,255,0.9)]">
             {isAr ? "حضورك هو أثمن هدية" : "The Gift Of Presence is"}
           </p>
           <div className="inline-block relative">
-            <p className="font-script text-3xl sm:text-4xl lg:text-[46px] text-[#121110] tracking-wide leading-tight mt-0.5 drop-shadow-[0_1px_1px_rgba(255,255,255,0.9)]">
+            <p className="font-script text-3xl sm:text-4xl lg:text-[46px] text-white md:text-[#121110] tracking-wide leading-tight mt-0.5 drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)] md:drop-shadow-[0_1px_1px_rgba(255,255,255,0.9)]">
               {isAr ? "أجمل ما يمكن تقديمه" : "The Best Present"}
             </p>
             {/* Delicate Gold Underline */}
