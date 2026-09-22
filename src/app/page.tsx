@@ -22,41 +22,41 @@ export default function Home() {
 
   return (
     <main
-      className="relative min-h-screen w-full flex flex-col justify-between overflow-x-hidden"
+      className="relative min-h-screen w-full bg-[#0a0b0e] flex flex-col items-center justify-between overflow-x-hidden"
       dir={currentLang === "ar" ? "rtl" : "ltr"}
     >
-      {/* Navigation Bar - Clean, separate component */}
-      <div className="relative z-20">
-        <Navbar
-          currentLang={currentLang}
-          onToggleLang={(lang) => setCurrentLang(lang)}
-          onOpenBooking={() => handleOpenBooking("General Consultation")}
-        />
-      </div>
-
-      {/* Whole Landing Page Body with heroimage.png as background */}
-      <div className="relative z-10 flex flex-col flex-grow justify-between">
-        {/* Exact Clean Luxury Background Image from User - Pushed Up */}
+      {/* Luxury Broadsheet Canvas Container */}
+      <div className="relative w-full max-w-[1140px] xl:max-w-[1180px] flex flex-col justify-between shadow-[0_0_80px_rgba(0,0,0,0.85)] min-h-screen">
+        {/* Exact Clean Luxury Background Image from User */}
         <div className="absolute inset-0 pointer-events-none select-none z-0">
           <Image
             src="/images/heroimage.png"
             alt="Luxury Waves & Gold Ribbons Background"
             fill
             priority
-            sizes="100vw"
-            className="object-cover object-[center_-70px] sm:object-[center_-90px] md:object-[center_-110px]"
-            style={{ objectPosition: "center -100px" }}
-            quality={98}
+            sizes="(max-width: 1200px) 100vw, 1180px"
+            className="object-cover object-top"
+            quality={100}
+          />
+        </div>
+
+        {/* Navigation Bar - Transparent, integrated natively with the top black satin ribbon */}
+        <div className="relative z-20">
+          <Navbar
+            currentLang={currentLang}
+            onToggleLang={(lang) => setCurrentLang(lang)}
+            onOpenBooking={() => handleOpenBooking("General Consultation")}
+            isHome={true}
           />
         </div>
 
         {/* Hero / Bio / Expertise Section */}
-        <div className="relative z-10 mt-1 sm:mt-3 md:mt-4">
+        <div className="relative z-10 flex-grow">
           <HeroSection currentLang={currentLang} />
         </div>
 
         {/* Three Pillar Service Cards */}
-        <div className="relative z-10 mt-1 sm:mt-2 mb-8 sm:mb-12">
+        <div className="relative z-10 mb-4 sm:mb-8">
           <ServiceCards
             currentLang={currentLang}
             onSelectService={(service) => handleOpenBooking(service)}
@@ -65,7 +65,7 @@ export default function Home() {
       </div>
 
       {/* Clean High-Readability Luxury Footer */}
-      <div className="relative z-20">
+      <div className="relative z-20 w-full">
         <Footer
           currentLang={currentLang}
           onOpenBooking={() => handleOpenBooking("Consultation")}

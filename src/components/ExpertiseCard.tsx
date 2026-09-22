@@ -10,14 +10,15 @@ export default function ExpertiseCard({ currentLang = "en" }: ExpertiseCardProps
   return (
     <div
       id="expertise"
-      className="w-full bg-white/95 backdrop-blur-md border border-[#c5a059]/45 shadow-[0_8px_24px_rgba(150,120,70,0.08)] p-6 sm:p-7 rounded-2xl text-[#24221d]"
+      className="w-full bg-[#fcf8f0]/80 backdrop-blur-[1px] border border-[#c5a059] shadow-[0_4px_16px_rgba(150,120,70,0.06)] p-4 sm:p-4.5 text-[#24221d]"
       dir={isAr ? "rtl" : "ltr"}
     >
-      <h3 className="font-serif text-2xl sm:text-[26px] text-[#121110] font-normal tracking-wide mb-3.5">
+      <h3 className="font-serif text-[20px] sm:text-[22px] text-[#121110] font-normal tracking-wide">
         {isAr ? "مجالات الخبرة" : "Expertise"}
       </h3>
+      <div className="w-8 h-[1px] bg-[#c5a059] mt-1 mb-2.5" />
 
-      <div className="space-y-3.5 font-serif text-[14px] sm:text-[14.5px] leading-[1.68] text-[#282622]">
+      <div className="space-y-2.5 font-serif text-[11.8px] sm:text-[12.4px] leading-[1.5] text-[#282520]">
         {/* Diagnostic Assessment Block */}
         <p className="text-left rtl:text-right">
           {isAr
