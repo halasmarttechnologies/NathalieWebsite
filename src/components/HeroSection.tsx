@@ -16,7 +16,7 @@ export default function HeroSection({ currentLang: propLang }: HeroSectionProps)
   return (
     <section
       id="home"
-      className="relative z-10 w-full pt-12 sm:pt-16 md:pt-20 lg:pt-24 pb-6 px-4 sm:px-8 lg:px-12"
+      className="relative z-10 w-full pt-4 sm:pt-6 md:pt-8 pb-6 px-4 sm:px-8 lg:px-12"
       dir={isAr ? "rtl" : "ltr"}
     >
       <div className="max-w-[1240px] mx-auto">

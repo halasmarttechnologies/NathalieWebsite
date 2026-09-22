@@ -36,7 +36,7 @@ export default function Home() {
 
       {/* Whole Landing Page Body with heroimage.png as background */}
       <div className="relative z-10 flex flex-col flex-grow justify-between">
-        {/* Exact Clean Luxury Background Image from User */}
+        {/* Exact Clean Luxury Background Image from User - Pushed Up */}
         <div className="absolute inset-0 pointer-events-none select-none z-0">
           <Image
             src="/images/heroimage.png"
@@ -44,7 +44,8 @@ export default function Home() {
             fill
             priority
             sizes="100vw"
-            className="object-cover object-top"
+            className="object-cover object-[center_-70px] sm:object-[center_-90px] md:object-[center_-110px]"
+            style={{ objectPosition: "center -100px" }}
             quality={98}
           />
         </div>
