@@ -22,26 +22,26 @@ export default function Home() {
 
   return (
     <main
-      className="relative min-h-screen w-full bg-[#0a0b0e] flex flex-col items-center justify-between overflow-x-hidden"
+      className="relative min-h-screen w-full bg-[#f8f5ee] flex flex-col justify-between overflow-x-hidden"
       dir={currentLang === "ar" ? "rtl" : "ltr"}
     >
-      {/* Luxury Broadsheet Canvas Container */}
-      <div className="relative w-full max-w-[1140px] xl:max-w-[1180px] flex flex-col justify-between shadow-[0_0_80px_rgba(0,0,0,0.85)] min-h-screen">
-        {/* Exact Clean Luxury Background Image from User */}
-        <div className="absolute inset-0 pointer-events-none select-none z-0">
+      {/* Full-width Landing Page Body */}
+      <div className="relative w-full flex flex-col justify-between flex-grow min-h-screen">
+        {/* Exact Clean Luxury Background Image from User spanning full width */}
+        <div className="absolute inset-0 pointer-events-none select-none z-0 overflow-hidden">
           <Image
             src="/images/heroimage.png"
             alt="Luxury Waves & Gold Ribbons Background"
             fill
             priority
-            sizes="(max-width: 1200px) 100vw, 1180px"
+            sizes="100vw"
             className="object-cover object-top"
             quality={100}
           />
         </div>
 
         {/* Navigation Bar - Transparent, integrated natively with the top black satin ribbon */}
-        <div className="relative z-20">
+        <div className="relative z-20 w-full">
           <Navbar
             currentLang={currentLang}
             onToggleLang={(lang) => setCurrentLang(lang)}
@@ -51,12 +51,12 @@ export default function Home() {
         </div>
 
         {/* Hero / Bio / Expertise Section */}
-        <div className="relative z-10 flex-grow">
+        <div className="relative z-10 flex-grow w-full">
           <HeroSection currentLang={currentLang} />
         </div>
 
         {/* Three Pillar Service Cards */}
-        <div className="relative z-10 mb-4 sm:mb-8">
+        <div className="relative z-10 w-full mb-6 sm:mb-10">
           <ServiceCards
             currentLang={currentLang}
             onSelectService={(service) => handleOpenBooking(service)}

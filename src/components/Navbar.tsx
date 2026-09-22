@@ -39,13 +39,13 @@ export default function Navbar({
 
   return (
     <header
-      className={`relative z-50 w-full transition-all duration-300 py-2.5 sm:py-3.5 px-4 sm:px-8 lg:px-10 ${
+      className={`relative z-50 w-full transition-all duration-300 py-2.5 sm:py-3.5 px-4 sm:px-8 lg:px-12 ${
         isHome
           ? "bg-transparent"
           : "bg-[#0a0b0f] border-b border-[#c5a059]/40 shadow-[0_6px_25px_rgba(0,0,0,0.7)]"
       }`}
     >
-      <div className="max-w-[1180px] mx-auto flex items-center justify-between">
+      <div className="max-w-[1240px] mx-auto flex items-center justify-between">
         {/* Brand Logo & Tagline */}
         <Link href="/" className="group flex flex-col items-start select-none">
           <span className="font-serif text-[22px] sm:text-[25px] lg:text-[27px] font-normal text-[#ffffff] tracking-wide transition-colors group-hover:text-[#f8ebd0] leading-tight drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)]">

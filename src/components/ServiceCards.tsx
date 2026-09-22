@@ -49,8 +49,8 @@ export default function ServiceCards({
   ];
 
   return (
-    <section id="services" className="relative z-10 w-full pt-1 sm:pt-2 pb-6 px-4 sm:px-8 lg:px-10">
-      <div className="max-w-[1180px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5 lg:gap-6">
+    <section id="services" className="relative z-10 w-full pt-1 sm:pt-2 pb-6 px-4 sm:px-8 lg:px-12">
+      <div className="max-w-[1240px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5 lg:gap-6">
         {services.map((item) => (
           <div
             key={item.id}
