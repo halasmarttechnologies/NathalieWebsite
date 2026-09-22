@@ -27,17 +27,33 @@ export default function Home() {
     >
       {/* Full-width Landing Page Body */}
       <div className="relative w-full flex flex-col justify-between flex-grow min-h-screen">
-        {/* Exact Clean Luxury Background Image from User spanning full width */}
+        {/* Exact Clean Luxury Background Images: Mobile (phoneview.png) & Desktop (heroimage.png) */}
         <div className="absolute inset-0 pointer-events-none select-none z-0 overflow-hidden">
-          <Image
-            src="/images/heroimage.png"
-            alt="Luxury Waves & Gold Ribbons Background"
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover object-top"
-            quality={100}
-          />
+          {/* Desktop Background */}
+          <div className="hidden md:block absolute inset-0">
+            <Image
+              src="/images/heroimage.png"
+              alt="Luxury Waves & Gold Ribbons Background"
+              fill
+              priority
+              sizes="100vw"
+              className="object-cover object-top"
+              quality={100}
+            />
+          </div>
+
+          {/* Mobile Background */}
+          <div className="block md:hidden absolute inset-0">
+            <Image
+              src="/images/phoneview.png"
+              alt="Luxury Waves & Gold Ribbons Mobile Background"
+              fill
+              priority
+              sizes="100vw"
+              className="object-cover object-top"
+              quality={100}
+            />
+          </div>
         </div>
 
         {/* Navigation Bar - Transparent, integrated natively with the top black satin ribbon */}
