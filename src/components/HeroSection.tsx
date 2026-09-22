@@ -23,18 +23,18 @@ export default function HeroSection({ currentLang: propLang }: HeroSectionProps)
     >
       <div className="max-w-[1240px] mx-auto">
         {/* Upper Script Calligraphy Quote */}
-        <div className="text-center mb-7 sm:mb-10 select-none">
-          <p className="font-script text-3xl sm:text-4xl lg:text-[46px] text-[#1c1a17] tracking-wide leading-tight drop-shadow-[0_1px_1px_rgba(255,255,255,0.85)]">
+        <div className="text-center mb-8 sm:mb-11 select-none">
+          <p className="font-script text-3xl sm:text-4xl lg:text-[46px] text-white tracking-wide leading-tight drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
             {isAr ? "حضورك هو أثمن هدية" : "The Gift Of Presence is"}
           </p>
           <div className="inline-block relative">
-            <p className="font-script text-3xl sm:text-4xl lg:text-[46px] text-[#1c1a17] tracking-wide leading-tight mt-0.5 drop-shadow-[0_1px_1px_rgba(255,255,255,0.85)]">
+            <p className="font-script text-3xl sm:text-4xl lg:text-[46px] text-white tracking-wide leading-tight mt-0.5 drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
               {isAr ? "أجمل ما يمكن تقديمه" : "The Best Present"}
             </p>
             {/* Delicate Gold Underline with Diamond Accent */}
-            <div className="flex items-center justify-center space-x-2 rtl:space-x-reverse mt-1.5">
+            <div className="flex items-center justify-center space-x-2 rtl:space-x-reverse mt-2">
               <div className="w-16 sm:w-24 h-[1.5px] bg-gradient-to-r from-transparent to-[#c5a059]" />
-              <div className="w-1.5 h-1.5 rotate-45 bg-[#c5a059]" />
+              <div className="w-2 h-2 rotate-45 border border-[#c5a059] bg-[#e5be70] shadow-[0_0_8px_rgba(229,190,112,0.8)]" />
               <div className="w-16 sm:w-24 h-[1.5px] bg-gradient-to-l from-transparent to-[#c5a059]" />
             </div>
           </div>

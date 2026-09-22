@@ -38,7 +38,7 @@ export default function PageHeader({
       )}
 
       {/* Elegant Script Subtitle */}
-      <p className="font-script text-3xl sm:text-4xl lg:text-[42px] text-[#f2e6cf] tracking-wide leading-tight drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+      <p className="font-script text-3xl sm:text-4xl lg:text-[42px] text-white tracking-wide leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
         {isAr ? subtitleAr : subtitleEn}
       </p>
 
