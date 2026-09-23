@@ -35,7 +35,7 @@ export default function PageHeader({
         {/* Optional Top Category Badge */}
         {(badgeEn || badgeAr) && (
           <div className="inline-flex items-center px-4 py-1 rounded-full bg-[#c5a059]/15 border border-[#c5a059]/40 mb-3 sm:mb-4 shadow-xs">
-            <span className="font-serif text-xs uppercase tracking-[0.25em] text-[#f3d085] font-medium">
+            <span className="font-content text-xs uppercase tracking-[0.25em] text-[#f3d085] font-medium">
               {isAr ? badgeAr : badgeEn}
             </span>
           </div>
@@ -60,7 +60,7 @@ export default function PageHeader({
 
         {/* Contextual Description */}
         {(descriptionEn || descriptionAr) && (
-          <p className="font-serif text-[15.5px] sm:text-[17px] text-[#ded9cd] max-w-2xl mx-auto leading-relaxed drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)] px-2">
+          <p className="font-content text-[15px] sm:text-[16px] text-[#ded9cd] max-w-2xl mx-auto leading-relaxed drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)] px-2 font-normal">
             {isAr ? descriptionAr : descriptionEn}
           </p>
         )}

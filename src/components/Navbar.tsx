@@ -48,10 +48,22 @@ export default function Navbar({
       <div className="max-w-[1240px] mx-auto flex items-center justify-between">
         {/* Brand Logo & Tagline */}
         <Link href="/" className="group flex flex-col items-start select-none">
-          <span className="font-serif text-[22px] sm:text-[25px] lg:text-[27px] font-normal text-[#ffffff] tracking-wide transition-colors group-hover:text-[#f8ebd0] leading-tight drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)]">
+          <span
+            className={`font-normal text-[#ffffff] transition-colors group-hover:text-[#f8ebd0] leading-none drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)] ${
+              isAr
+                ? "font-serif text-[24px] sm:text-[27px] lg:text-[29px] tracking-wide"
+                : "font-signature text-[32px] sm:text-[36px] lg:text-[40px] tracking-normal"
+            }`}
+          >
             {isAr ? "ناتالي روزنبلوم" : "Nathalie Rosenblum"}
           </span>
-          <span className="font-serif text-[13.5px] sm:text-[14.5px] text-[#cfa65c] tracking-normal -mt-0.5 font-normal drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">
+          <span
+            className={`text-[#cfa65c] font-normal drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)] ${
+              isAr
+                ? "font-serif text-[13.5px] sm:text-[14.5px] -mt-0.5"
+                : "font-content text-[12px] sm:text-[12.5px] tracking-[0.16em] uppercase mt-0.5 opacity-90"
+            }`}
+          >
             {isAr ? "أخصائية نفسية مرخصة في دبي" : "Licensed Psychologist in Dubai"}
           </span>
         </Link>
@@ -68,7 +80,7 @@ export default function Navbar({
               <Link
                 key={item.href}
                 href={item.href}
-                className={`relative font-serif text-[12.5px] sm:text-[13px] tracking-[0.14em] uppercase transition-all duration-200 py-1 drop-shadow-[0_1px_2px_rgba(0,0,0,0.9)] ${
+                className={`relative font-content text-[12.5px] sm:text-[13px] tracking-[0.14em] uppercase transition-all duration-200 py-1 drop-shadow-[0_1px_2px_rgba(0,0,0,0.9)] ${
                   isActive
                     ? "text-[#ffffff] font-medium"
                     : "text-[#dcd6ca] hover:text-[#e5be70]"
@@ -86,10 +98,10 @@ export default function Navbar({
         {/* Language Selector + Mobile Menu Trigger */}
         <div className="flex items-center space-x-3 rtl:space-x-reverse">
           {/* Dual Pill Language Switcher */}
-          <div className="flex flex-col rounded-[3px] overflow-hidden border border-[#cda45e]/60 shadow-[0_2px_8px_rgba(0,0,0,0.7)] w-[64px] sm:w-[68px] select-none">
+          <div className="flex flex-col rounded-[3px] overflow-hidden border border-[#cda45e]/60 shadow-[0_2px_8px_rgba(0,0,0,0.7)] w-[66px] sm:w-[70px] select-none">
             <button
               onClick={() => toggleLang("en")}
-              className={`py-0.5 sm:py-1 text-center font-serif text-[11.5px] tracking-wider transition-all duration-200 cursor-pointer ${
+              className={`py-1 text-center font-content text-[12px] tracking-wider transition-all duration-200 cursor-pointer ${
                 currentLang === "en"
                   ? "bg-gradient-to-b from-[#e7cca1] via-[#d4af62] to-[#bc9242] text-[#121110] font-bold shadow-inner"
                   : "bg-[#0e0f14] text-[#ded9ce] hover:text-white"
@@ -99,7 +111,7 @@ export default function Navbar({
             </button>
             <button
               onClick={() => toggleLang("ar")}
-              className={`py-0.5 sm:py-1 text-center font-serif text-[11.5px] tracking-wider border-t border-[#cda45e]/40 transition-all duration-200 cursor-pointer ${
+              className={`py-1 text-center font-content text-[12px] tracking-wider border-t border-[#cda45e]/40 transition-all duration-200 cursor-pointer ${
                 currentLang === "ar"
                   ? "bg-gradient-to-b from-[#e7cca1] via-[#d4af62] to-[#bc9242] text-[#121110] font-bold shadow-inner"
                   : "bg-[#0a0b0f] text-[#ded9ce] hover:text-[#e5be70]"
@@ -128,7 +140,7 @@ export default function Navbar({
               key={item.href}
               href={item.href}
               onClick={() => setMobileMenuOpen(false)}
-              className="font-serif text-[15px] text-[#f2ede4] hover:text-[#e5be70] py-1.5 border-b border-white/10 transition-colors tracking-wide"
+              className="font-content text-[15px] text-[#f2ede4] hover:text-[#e5be70] py-1.5 border-b border-white/10 transition-colors tracking-wide"
             >
               {item.label}
             </Link>

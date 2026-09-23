@@ -1,9 +1,20 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Velmora Signature";
+  src: url("/fonts/VelmoraSignature.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 @theme {
   --font-serif: var(--font-cormorant), "Times New Roman", Georgia, serif;
   --font-script: var(--font-alex-brush), "Brush Script MT", cursive;
-  --font-sans: var(--font-inter), system-ui, -apple-system, sans-serif;
+  --font-signature: var(--font-velmora), "Velmora Signature", "Brush Script MT", cursive;
+  --font-sans: var(--font-montserrat), system-ui, -apple-system, sans-serif;
+  --font-content: var(--font-montserrat), system-ui, -apple-system, sans-serif;
+  --font-montserrat: var(--font-montserrat), system-ui, -apple-system, sans-serif;
   --font-arabic: var(--font-arabic), "Traditional Arabic", serif;
 
   --color-gold-light: #f6e6c2;
@@ -28,6 +39,11 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  font-family: var(--font-montserrat), system-ui, -apple-system, sans-serif;
+  font-size: 14px;
+}
+
 /* Luxury typography styling */
 .font-serif {
   font-family: var(--font-cormorant), "Times New Roman", Georgia, serif;
@@ -37,8 +53,14 @@ html {
   font-family: var(--font-alex-brush), "Brush Script MT", cursive;
 }
 
-.font-sans {
-  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+.font-signature {
+  font-family: var(--font-velmora), "Velmora Signature", "Brush Script MT", cursive;
+}
+
+.font-sans,
+.font-content,
+.font-montserrat {
+  font-family: var(--font-montserrat), system-ui, -apple-system, sans-serif;
 }
 
 .font-arabic {

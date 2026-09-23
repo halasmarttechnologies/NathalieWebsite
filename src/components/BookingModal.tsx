@@ -61,7 +61,7 @@ export default function BookingModal({
             <h3 className="font-serif text-3xl text-[#1e1f24]">
               {isAr ? "تم استلام طلبك بنجاح" : "Appointment Requested"}
             </h3>
-            <p className="font-serif text-base text-[#5a5750] max-w-md mx-auto">
+            <p className="font-content text-[14px] text-[#5a5750] max-w-md mx-auto">
               {isAr
                 ? "شكراً لتواصلك مع الدكتورة ناتالي روزنبلوم. سيتواصل معك فريقنا في دبي لتأكيد الموعد المناسب وتزويدك بكافة التفاصيل."
                 : "Thank you for reaching out to Nathalie Rosenblum's clinical practice in Dubai. Our intake coordinator will contact you promptly to finalize your appointment."}
@@ -72,7 +72,7 @@ export default function BookingModal({
                   setSubmitted(false);
                   onClose();
                 }}
-                className="px-8 py-2.5 rounded-full bg-gradient-to-r from-[#d9b87b] via-[#c5a059] to-[#b38a42] text-[#161618] font-serif font-semibold shadow-md hover:brightness-105 transition-all"
+                className="px-8 py-2.5 rounded-full bg-gradient-to-r from-[#d9b87b] via-[#c5a059] to-[#b38a42] text-[#161618] font-content font-semibold text-[14px] shadow-md hover:brightness-105 transition-all cursor-pointer"
               >
                 {isAr ? "إغلاق" : "Close"}
               </button>
@@ -81,13 +81,13 @@ export default function BookingModal({
         ) : (
           <div>
             <div className="mb-6">
-              <span className="font-serif text-xs uppercase tracking-[0.25em] text-[#8e6d2f]">
+              <span className="font-content text-xs uppercase tracking-[0.25em] text-[#8e6d2f] font-medium">
                 {isAr ? "احجز جلستك" : "Consultation Booking"}
               </span>
               <h2 className="font-serif text-2xl sm:text-3xl text-[#1e1f24] mt-1">
                 {isAr ? "حجز جلسة استشارية" : "Book A Confidential Session"}
               </h2>
-              <p className="font-serif text-sm text-[#66625a] mt-1">
+              <p className="font-content text-[13px] text-[#66625a] mt-1">
                 {isAr
                   ? "جلسات استشارية فردية، أسرية، وللأزواج باللغتين العربية والإنجليزية."
                   : "In-person at our Dubai clinic or online worldwide via secure telehealth."}
@@ -97,7 +97,7 @@ export default function BookingModal({
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block font-serif text-xs uppercase tracking-wider text-[#55524b] mb-1">
+                  <label className="block font-content text-xs uppercase tracking-wider text-[#55524b] mb-1 font-medium">
                     {isAr ? "الاسم الكامل" : "Full Name"} *
                   </label>
                   <div className="relative">
@@ -110,13 +110,13 @@ export default function BookingModal({
                         setFormData({ ...formData, name: e.target.value })
                       }
                       placeholder={isAr ? "الاسم" : "Your name"}
-                      className="w-full pl-9 pr-3 py-2 text-sm bg-white/90 border border-[#d9cdb8] rounded-lg focus:outline-none focus:border-[#c5a059] focus:ring-1 focus:ring-[#c5a059]"
+                      className="w-full pl-9 pr-3 py-2 text-sm font-content bg-white/90 border border-[#d9cdb8] rounded-lg focus:outline-none focus:border-[#c5a059] focus:ring-1 focus:ring-[#c5a059]"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="block font-serif text-xs uppercase tracking-wider text-[#55524b] mb-1">
+                  <label className="block font-content text-xs uppercase tracking-wider text-[#55524b] mb-1 font-medium">
                     {isAr ? "البريد الإلكتروني" : "Email Address"} *
                   </label>
                   <div className="relative">
@@ -129,7 +129,7 @@ export default function BookingModal({
                         setFormData({ ...formData, email: e.target.value })
                       }
                       placeholder="email@example.com"
-                      className="w-full pl-9 pr-3 py-2 text-sm bg-white/90 border border-[#d9cdb8] rounded-lg focus:outline-none focus:border-[#c5a059] focus:ring-1 focus:ring-[#c5a059]"
+                      className="w-full pl-9 pr-3 py-2 text-sm font-content bg-white/90 border border-[#d9cdb8] rounded-lg focus:outline-none focus:border-[#c5a059] focus:ring-1 focus:ring-[#c5a059]"
                     />
                   </div>
                 </div>
@@ -137,7 +137,7 @@ export default function BookingModal({
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block font-serif text-xs uppercase tracking-wider text-[#55524b] mb-1">
+                  <label className="block font-content text-xs uppercase tracking-wider text-[#55524b] mb-1 font-medium">
                     {isAr ? "رقم الهاتف / واتساب" : "Phone / WhatsApp"} *
                   </label>
                   <div className="relative">
@@ -150,13 +150,13 @@ export default function BookingModal({
                         setFormData({ ...formData, phone: e.target.value })
                       }
                       placeholder="+971 50 123 4567"
-                      className="w-full pl-9 pr-3 py-2 text-sm bg-white/90 border border-[#d9cdb8] rounded-lg focus:outline-none focus:border-[#c5a059] focus:ring-1 focus:ring-[#c5a059]"
+                      className="w-full pl-9 pr-3 py-2 text-sm font-content bg-white/90 border border-[#d9cdb8] rounded-lg focus:outline-none focus:border-[#c5a059] focus:ring-1 focus:ring-[#c5a059]"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="block font-serif text-xs uppercase tracking-wider text-[#55524b] mb-1">
+                  <label className="block font-content text-xs uppercase tracking-wider text-[#55524b] mb-1 font-medium">
                     {isAr ? "نوع الخدمة" : "Therapy Service"}
                   </label>
                   <select
@@ -164,7 +164,7 @@ export default function BookingModal({
                     onChange={(e) =>
                       setFormData({ ...formData, service: e.target.value })
                     }
-                    className="w-full px-3 py-2 text-sm bg-white/90 border border-[#d9cdb8] rounded-lg focus:outline-none focus:border-[#c5a059] focus:ring-1 focus:ring-[#c5a059]"
+                    className="w-full px-3 py-2 text-sm font-content bg-white/90 border border-[#d9cdb8] rounded-lg focus:outline-none focus:border-[#c5a059] focus:ring-1 focus:ring-[#c5a059]"
                   >
                     <option value="Individual Therapy">Individual Therapy</option>
                     <option value="Couples Therapy">Couples & Marriage Therapy</option>
@@ -176,7 +176,7 @@ export default function BookingModal({
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block font-serif text-xs uppercase tracking-wider text-[#55524b] mb-1">
+                  <label className="block font-content text-xs uppercase tracking-wider text-[#55524b] mb-1 font-medium">
                     {isAr ? "التاريخ المفضل" : "Preferred Date"}
                   </label>
                   <div className="relative">
@@ -187,13 +187,13 @@ export default function BookingModal({
                       onChange={(e) =>
                         setFormData({ ...formData, date: e.target.value })
                       }
-                      className="w-full pl-9 pr-3 py-2 text-sm bg-white/90 border border-[#d9cdb8] rounded-lg focus:outline-none focus:border-[#c5a059] focus:ring-1 focus:ring-[#c5a059]"
+                      className="w-full pl-9 pr-3 py-2 text-sm font-content bg-white/90 border border-[#d9cdb8] rounded-lg focus:outline-none focus:border-[#c5a059] focus:ring-1 focus:ring-[#c5a059]"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="block font-serif text-xs uppercase tracking-wider text-[#55524b] mb-1">
+                  <label className="block font-content text-xs uppercase tracking-wider text-[#55524b] mb-1 font-medium">
                     {isAr ? "الوقت المفضل" : "Preferred Time Slot"}
                   </label>
                   <div className="relative">
@@ -203,7 +203,7 @@ export default function BookingModal({
                       onChange={(e) =>
                         setFormData({ ...formData, time: e.target.value })
                       }
-                      className="w-full pl-9 pr-3 py-2 text-sm bg-white/90 border border-[#d9cdb8] rounded-lg focus:outline-none focus:border-[#c5a059] focus:ring-1 focus:ring-[#c5a059]"
+                      className="w-full pl-9 pr-3 py-2 text-sm font-content bg-white/90 border border-[#d9cdb8] rounded-lg focus:outline-none focus:border-[#c5a059] focus:ring-1 focus:ring-[#c5a059]"
                     >
                       <option>Morning (09:00 - 12:00)</option>
                       <option>Afternoon (12:00 - 16:00)</option>
@@ -214,7 +214,7 @@ export default function BookingModal({
               </div>
 
               <div>
-                <label className="block font-serif text-xs uppercase tracking-wider text-[#55524b] mb-1">
+                <label className="block font-content text-xs uppercase tracking-wider text-[#55524b] mb-1 font-medium">
                   {isAr ? "ملاحظات إضافية (اختياري)" : "Confidential Notes (Optional)"}
                 </label>
                 <textarea
@@ -228,14 +228,14 @@ export default function BookingModal({
                       ? "اذكر باختصار استفسارك أو رغبتك في جلسة حضورية أو عبر الإنترنت..."
                       : "Briefly share the nature of support you are seeking or if you prefer in-person / online..."
                   }
-                  className="w-full px-3 py-2 text-sm bg-white/90 border border-[#d9cdb8] rounded-lg focus:outline-none focus:border-[#c5a059] focus:ring-1 focus:ring-[#c5a059]"
+                  className="w-full px-3 py-2 text-sm font-content bg-white/90 border border-[#d9cdb8] rounded-lg focus:outline-none focus:border-[#c5a059] focus:ring-1 focus:ring-[#c5a059]"
                 />
               </div>
 
               <div className="pt-2">
                 <button
                   type="submit"
-                  className="w-full py-3 rounded-xl bg-gradient-to-r from-[#d9b87b] via-[#c5a059] to-[#b38a42] text-[#161618] font-serif font-semibold text-base shadow-lg hover:brightness-105 transition-all duration-200"
+                  className="w-full py-3 rounded-xl bg-gradient-to-r from-[#d9b87b] via-[#c5a059] to-[#b38a42] text-[#161618] font-content font-semibold text-base shadow-lg hover:brightness-105 transition-all duration-200 cursor-pointer"
                 >
                   {isAr ? "تأكيد وإرسال طلب الحجز" : "Confirm Consultation Request"}
                 </button>

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Alex_Brush, Inter, Amiri } from "next/font/google";
+import { Cormorant_Garamond, Alex_Brush, Montserrat, Amiri } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
 const cormorant = Cormorant_Garamond({
@@ -17,9 +18,16 @@ const alexBrush = Alex_Brush({
   display: "swap",
 });
 
-const inter = Inter({
-  variable: "--font-inter",
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  display: "swap",
+});
+
+const velmora = localFont({
+  src: "../fonts/VelmoraSignature.otf",
+  variable: "--font-velmora",
   display: "swap",
 });
 
@@ -62,7 +70,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${cormorant.variable} ${alexBrush.variable} ${inter.variable} ${amiri.variable} antialiased`}
+      className={`${cormorant.variable} ${alexBrush.variable} ${montserrat.variable} ${velmora.variable} ${amiri.variable} antialiased`}
     >
       <body className="min-h-screen bg-[#f8f5ee] text-[#2a2a2e] font-sans selection:bg-[#c5a059]/30 selection:text-[#0b0c0e]">
         <LanguageProvider>{children}</LanguageProvider>

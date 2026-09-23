@@ -28,13 +28,21 @@ export default function Footer({
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-12 mb-12">
           {/* Brand & Mission Column (5 cols) */}
           <div className="md:col-span-5 flex flex-col items-start">
-            <h4 className="font-serif text-2xl sm:text-[28px] text-[#ffffff] font-normal tracking-wide drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">
+            <h4
+              className={`text-2xl sm:text-[30px] text-[#ffffff] font-normal tracking-wide drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)] ${
+                isAr ? "font-serif text-[26px]" : "font-signature text-[32px] sm:text-[36px]"
+              }`}
+            >
               {isAr ? "ناتالي روزنبلوم" : "Nathalie Rosenblum"}
             </h4>
-            <p className="font-serif text-[16px] text-[#e3ba6d] mt-1 mb-4 font-normal">
+            <p
+              className={`text-[#e3ba6d] mt-1 mb-4 font-normal ${
+                isAr ? "font-serif text-[15px]" : "font-content text-[12px] sm:text-[12.5px] uppercase tracking-[0.16em]"
+              }`}
+            >
               {isAr ? "أخصائية نفسية مرخصة في دبي" : "Licensed Psychologist in Dubai"}
             </p>
-            <p className="font-serif text-[14.5px] leading-[1.75] text-[#d4cfc5] max-w-md">
+            <p className="font-content text-[13px] sm:text-[13.5px] leading-[1.75] text-[#d4cfc5] max-w-md font-normal">
               {isAr
                 ? "ممارسة إكلينيكية متخصصة في دبي تقدم الرعاية النفسية الفردية، استشارات الأزواج، والعلاج الأسري وفق أرقى المعايير العالمية المعتمدة."
                 : "A private clinical practice in Dubai offering holistic psychotherapy, couples counseling, and family therapy grounded in evidence-informed methods and compassionate inquiry."}
@@ -43,7 +51,7 @@ export default function Footer({
             {/* CDA License Verification Badge */}
             <div className="mt-5 inline-flex items-center space-x-2.5 rtl:space-x-reverse px-3.5 py-2 rounded-md bg-[#161720] border border-[#c5a059]/40 shadow-sm">
               <ShieldCheck className="w-4 h-4 text-[#e3ba6d] shrink-0" />
-              <span className="font-serif text-[13px] text-[#e5be70] tracking-wide">
+              <span className="font-content text-[12.5px] sm:text-[13px] text-[#e5be70] tracking-wide">
                 {isAr
                   ? "مرخصة رسمياً من هيئة تنمية المجتمع في دبي (CDA)"
                   : "CDA Licensed Psychologist • Dubai, UAE"}
@@ -53,10 +61,10 @@ export default function Footer({
 
           {/* Navigation Links Column (3 cols) */}
           <div className="md:col-span-3">
-            <h5 className="font-serif text-[15px] font-semibold text-[#ffffff] uppercase tracking-widest mb-4 pb-1 border-b border-[#c5a059]/25 inline-block">
+            <h5 className="font-content text-[13px] font-semibold text-[#ffffff] uppercase tracking-widest mb-4 pb-1 border-b border-[#c5a059]/25 inline-block">
               {isAr ? "روابط سريعة" : "Navigation"}
             </h5>
-            <ul className="space-y-2.5 font-serif text-[14.5px] text-[#ded9cf]">
+            <ul className="space-y-2.5 font-content text-[13.5px] text-[#ded9cf]">
               <li>
                 <Link href="/" className="hover:text-[#e3ba6d] transition-colors inline-flex items-center space-x-1 rtl:space-x-reverse py-0.5">
                   <span>{isAr ? "الرئيسية" : "Home"}</span>
@@ -106,10 +114,10 @@ export default function Footer({
 
           {/* Clinic & Inquiries Column (4 cols) */}
           <div className="md:col-span-4">
-            <h5 className="font-serif text-[15px] font-semibold text-[#ffffff] uppercase tracking-widest mb-4 pb-1 border-b border-[#c5a059]/25 inline-block">
+            <h5 className="font-content text-[13px] font-semibold text-[#ffffff] uppercase tracking-widest mb-4 pb-1 border-b border-[#c5a059]/25 inline-block">
               {isAr ? "التواصل والعيادة" : "Clinic & Inquiries"}
             </h5>
-            <ul className="space-y-3.5 font-serif text-[14.5px] text-[#ded9cf]">
+            <ul className="space-y-3.5 font-content text-[13.5px] text-[#ded9cf]">
               <li className="flex items-start space-x-3 rtl:space-x-reverse">
                 <MapPin className="w-4 h-4 text-[#e3ba6d] shrink-0 mt-1" />
                 <span className="leading-relaxed">
@@ -141,7 +149,7 @@ export default function Footer({
         </div>
 
         {/* Bottom Copyright & Standards Bar */}
-        <div className="pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between text-[13px] font-serif text-[#9e998e] space-y-3 sm:space-y-0">
+        <div className="pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between text-[12.5px] font-content text-[#9e998e] space-y-3 sm:space-y-0">
           <p>© {new Date().getFullYear()} Nathalie Rosenblum. All Rights Reserved.</p>
           <div className="flex items-center space-x-3 rtl:space-x-reverse text-[#b8b2a5]">
             <span>Confidentiality Guaranteed</span>

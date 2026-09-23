@@ -40,7 +40,7 @@ export default function HeroSection({ currentLang: propLang }: HeroSectionProps)
           <div className="lg:col-span-7 flex flex-col justify-start mt-2 sm:mt-4 lg:mt-6">
             {/* "MEET" Label */}
             <div className="mb-0.5">
-              <span className="font-serif text-[12px] uppercase tracking-[0.45em] text-[#4d473f] font-semibold">
+              <span className="font-content text-[12px] uppercase tracking-[0.45em] text-[#4d473f] font-semibold">
                 {isAr ? "تـعـرّف عـلـى" : "M E E T"}
               </span>
             </div>
@@ -56,7 +56,7 @@ export default function HeroSection({ currentLang: propLang }: HeroSectionProps)
             </h2>
 
             {/* Qualifications / Credentials */}
-            <div className="mt-2.5 mb-3.5 space-y-0.5 font-serif text-[13.5px] sm:text-[14px] text-[#1c1a16] font-normal leading-snug">
+            <div className="mt-2.5 mb-3.5 space-y-1 font-content text-[13px] sm:text-[13.5px] text-[#1c1a16] font-normal leading-snug">
               <p>
                 {isAr
                   ? "أخصائية نفسية مرخصة من هيئة تنمية المجتمع في دبي (CDA)"
@@ -72,8 +72,8 @@ export default function HeroSection({ currentLang: propLang }: HeroSectionProps)
               </p>
             </div>
 
-            {/* Biography Paragraphs - Editorial Prose Filling the Page */}
-            <div className="space-y-3 font-serif text-[13px] sm:text-[13.6px] leading-[1.62] text-[#22201b] text-left rtl:text-right">
+            {/* Biography Paragraphs - Editorial Prose in Montserrat */}
+            <div className="space-y-3.5 font-content text-[13px] sm:text-[13.5px] leading-[1.72] text-[#22201b] text-left rtl:text-right font-normal">
               <p>
                 {isAr
                   ? "نشأت ناتالي روزنبلوم متأثرة بجذورها الأوروبية والشرق أوسطية ضمن النسيج الثقافي للتقاليد العربية والحياة الأسرية. واصلت لاحقاً تعليمها وتدريبها الإكلينيكي في أمريكا الشمالية، حيث حصلت على درجة الماجستير في علم النفس الإكلينيكي من جامعة كابيلا في مينيسوتا بالولايات المتحدة الأمريكية، ومعترف بها من قبل الجمعية الأمريكية لعلم النفس (APA). ناتالي أيضاً عضو في الجمعية الكندية للإرشاد والعلاج النفسي (CCPA)."

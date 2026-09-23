@@ -18,7 +18,7 @@ export default function ExpertiseCard({ currentLang = "en" }: ExpertiseCardProps
       </h3>
       <div className="w-8 h-[1px] bg-[#c5a059] mt-1 mb-2.5" />
 
-      <div className="space-y-2.5 font-serif text-[11.8px] sm:text-[12.4px] leading-[1.5] text-[#282520]">
+      <div className="space-y-2.5 font-content text-[12.5px] sm:text-[13px] leading-[1.55] text-[#282520]">
         {/* Diagnostic Assessment Block */}
         <p className="text-left rtl:text-right">
           {isAr

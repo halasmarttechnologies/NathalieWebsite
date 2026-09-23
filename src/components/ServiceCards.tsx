@@ -78,7 +78,7 @@ export default function ServiceCards({
             </div>
 
             {/* Description */}
-            <p className="font-serif text-[12px] sm:text-[12.5px] leading-[1.5] text-[#2c2923] max-w-[240px] mb-3 flex-grow">
+            <p className="font-content text-[12.5px] sm:text-[13px] leading-[1.55] text-[#2c2923] max-w-[240px] mb-3 flex-grow">
               {item.description}
             </p>
 
