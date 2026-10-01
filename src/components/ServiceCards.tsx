@@ -55,7 +55,7 @@ export default function ServiceCards({
           <div
             key={item.id}
             onClick={() => onSelectService?.(item.title)}
-            className="group relative bg-[#fcf8f0]/85 backdrop-blur-[2px] border border-[#c5a059]/40 hover:border-[#c5a059] rounded-xl p-4 sm:p-5 flex flex-col items-center justify-between text-center transition-all duration-300 shadow-[0_4px_16px_rgba(150,120,70,0.06)] hover:shadow-[0_8px_24px_rgba(150,120,70,0.12)] hover:-translate-y-0.5 cursor-pointer min-h-[190px] sm:min-h-[205px]"
+            className="group relative bg-[#f7f1ea]/85 backdrop-blur-[2px] border border-[#C2AB62]/45 hover:border-[#C2AB62] rounded-xl p-4 sm:p-5 flex flex-col items-center justify-between text-center transition-all duration-300 shadow-[0_4px_16px_rgba(194,171,98,0.08)] hover:shadow-[0_8px_24px_rgba(194,171,98,0.2)] hover:-translate-y-0.5 cursor-pointer min-h-[190px] sm:min-h-[205px]"
             dir={isAr ? "rtl" : "ltr"}
           >
             {/* Exact Line-Art Icon */}
@@ -71,10 +71,10 @@ export default function ServiceCards({
 
             {/* Title & Centered Gold Underline */}
             <div className="flex flex-col items-center mb-1">
-              <h3 className="font-serif text-[18px] sm:text-[19px] font-normal text-[#121110] tracking-normal group-hover:text-[#9e7631] transition-colors">
+              <h3 className="font-serif text-[18px] sm:text-[19px] font-normal text-[#121110] tracking-normal group-hover:text-[#9e8745] transition-colors">
                 {item.title}
               </h3>
-              <div className="w-8 h-[1px] bg-[#c5a059] my-1.5" />
+              <div className="w-8 h-[1px] bg-[#C2AB62] my-1.5 shadow-[0_0_6px_rgba(194,171,98,0.4)]" />
             </div>
 
             {/* Description */}
@@ -87,7 +87,7 @@ export default function ServiceCards({
               <button
                 type="button"
                 aria-label={`Learn more about ${item.title}`}
-                className="w-8 h-8 rounded-full border border-[#b88e4f] flex items-center justify-center text-[#b88e4f] group-hover:bg-[#c5a059] group-hover:text-white group-hover:border-[#c5a059] transition-all duration-300 focus:outline-none cursor-pointer"
+                className="w-8 h-8 rounded-full border border-[#C2AB62]/70 flex items-center justify-center text-[#9e8745] group-hover:bg-[#C2AB62] group-hover:text-white group-hover:border-[#C2AB62] transition-all duration-300 focus:outline-none cursor-pointer"
               >
                 {isAr ? (
                   <ArrowLeft className="w-3.5 h-3.5 transition-transform duration-300 group-hover:-translate-x-0.5" />

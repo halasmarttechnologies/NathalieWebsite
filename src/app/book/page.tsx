@@ -180,7 +180,7 @@ export default function BookPage() {
                     </Link>
                     <Link
                       href="/contact"
-                      className="px-6 py-2.5 rounded-full border border-[#c5a059] bg-[#faf6ee] text-[#936227] font-serif font-semibold text-sm hover:bg-[#c5a059] hover:text-[#121110] transition-colors"
+                      className="px-6 py-2.5 rounded-full border border-[#c5a059] bg-[#f6f1ea] text-[#936227] font-serif font-semibold text-sm hover:bg-[#c5a059] hover:text-[#121110] transition-colors"
                     >
                       {isAr ? "تفاصيل موقع العيادة" : "Clinic Location Details"}
                     </Link>
@@ -209,7 +209,7 @@ export default function BookPage() {
                             onClick={() => setFormData({ ...formData, service: srv.id })}
                             className={`p-5 rounded-xl border transition-all cursor-pointer flex flex-col justify-between ${
                               formData.service === srv.id
-                                ? "bg-[#f5ebd9] border-[#c5a059] shadow-md ring-1 ring-[#c5a059]"
+                                ? "bg-[#ede6dc] border-[#c5a059] shadow-md ring-1 ring-[#c5a059]"
                                 : "bg-white/80 border-[#d9cdb8] hover:border-[#c5a059]"
                             }`}
                           >
@@ -253,7 +253,7 @@ export default function BookPage() {
                             }
                             className={`p-4 rounded-xl border cursor-pointer flex items-center space-x-3 rtl:space-x-reverse ${
                               formData.format === "In-Person (Dubai Clinic)"
-                                ? "bg-[#f5ebd9] border-[#c5a059] ring-1 ring-[#c5a059]"
+                                ? "bg-[#ede6dc] border-[#c5a059] ring-1 ring-[#c5a059]"
                                 : "bg-white/80 border-[#d9cdb8]"
                             }`}
                           >
@@ -277,7 +277,7 @@ export default function BookPage() {
                             }
                             className={`p-4 rounded-xl border cursor-pointer flex items-center space-x-3 rtl:space-x-reverse ${
                               formData.format === "Online Telehealth (Worldwide)"
-                                ? "bg-[#f5ebd9] border-[#c5a059] ring-1 ring-[#c5a059]"
+                                ? "bg-[#ede6dc] border-[#c5a059] ring-1 ring-[#c5a059]"
                                 : "bg-white/80 border-[#d9cdb8]"
                             }`}
                           >
@@ -379,7 +379,7 @@ export default function BookPage() {
                         <button
                           type="button"
                           onClick={() => setStep(1)}
-                          className="px-6 py-2.5 rounded-full border border-[#c5a059] bg-[#faf6ee] text-[#936227] font-serif text-sm font-semibold hover:bg-[#c5a059] hover:text-[#121110] transition-colors"
+                          className="px-6 py-2.5 rounded-full border border-[#c5a059] bg-[#f6f1ea] text-[#936227] font-serif text-sm font-semibold hover:bg-[#c5a059] hover:text-[#121110] transition-colors"
                         >
                           {isAr ? "السابق" : "Back"}
                         </button>
@@ -482,7 +482,7 @@ export default function BookPage() {
                         <button
                           type="button"
                           onClick={() => setStep(2)}
-                          className="px-6 py-2.5 rounded-full border border-[#c5a059] bg-[#faf6ee] text-[#936227] font-serif text-sm font-semibold hover:bg-[#c5a059] hover:text-[#121110] transition-colors"
+                          className="px-6 py-2.5 rounded-full border border-[#c5a059] bg-[#f6f1ea] text-[#936227] font-serif text-sm font-semibold hover:bg-[#c5a059] hover:text-[#121110] transition-colors"
                         >
                           {isAr ? "السابق" : "Back"}
                         </button>

@@ -378,7 +378,7 @@ export default function DisordersPage() {
                 <div className="pt-3 border-t border-[#c5a059]/20">
                   <button
                     onClick={() => handleBook(isAr ? item.titleAr : item.titleEn)}
-                    className="w-full py-2.5 rounded-xl border border-[#c5a059] bg-[#faf6ee] hover:bg-[#c5a059] text-[#936227] hover:text-[#121110] font-serif font-semibold text-xs sm:text-sm transition-all shadow-xs flex items-center justify-center space-x-2 rtl:space-x-reverse cursor-pointer"
+                    className="w-full py-2.5 rounded-xl border border-[#c5a059] bg-[#f6f1ea] hover:bg-[#c5a059] text-[#936227] hover:text-[#121110] font-serif font-semibold text-xs sm:text-sm transition-all shadow-xs flex items-center justify-center space-x-2 rtl:space-x-reverse cursor-pointer"
                   >
                     <CalendarCheck className="w-4 h-4" />
                     <span>

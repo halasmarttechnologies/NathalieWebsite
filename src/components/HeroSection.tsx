@@ -20,17 +20,17 @@ export default function HeroSection({ currentLang: propLang }: HeroSectionProps)
       dir={isAr ? "rtl" : "ltr"}
     >
       <div className="max-w-[1240px] mx-auto">
-        {/* Upper Script Calligraphy Quote - Positioned distinctly lower in the ivory scoop (extra push for mobile) */}
-        <div className="text-center mt-4 sm:mt-0 mb-10 sm:mb-16 md:mb-20 lg:mb-24 select-none">
-          <p className="font-script text-[30px] sm:text-[36px] lg:text-[40px] text-[#2b2a26] tracking-wide leading-tight">
+        {/* Upper Script Calligraphy Quote - Exact Great Vibes Font Style from Mockup */}
+        <div className="text-center mt-3 sm:mt-1 mb-8 sm:mb-12 md:mb-14 select-none">
+          <p className="font-script text-[36px] sm:text-[44px] lg:text-[48px] text-[#22201b] tracking-wide leading-tight drop-shadow-[0_1px_1px_rgba(255,255,255,0.6)]">
             {isAr ? "حضورك هو أثمن هدية" : "The Gift Of Presence is"}
           </p>
           <div className="inline-block relative">
-            <p className="font-script text-[30px] sm:text-[36px] lg:text-[40px] text-[#2b2a26] tracking-wide leading-tight mt-0.5">
+            <p className="font-script text-[36px] sm:text-[44px] lg:text-[48px] text-[#22201b] tracking-wide leading-tight mt-0.5 drop-shadow-[0_1px_1px_rgba(255,255,255,0.6)]">
               {isAr ? "أجمل ما يمكن تقديمه" : "The Best Present"}
             </p>
-            {/* Delicate Gold Underline */}
-            <div className="w-24 sm:w-28 mx-auto h-[1px] bg-[#c5a059] mt-1.5" />
+            {/* Delicate Gold Underline in #C2AB62 */}
+            <div className="w-24 sm:w-28 mx-auto h-[1.5px] bg-[#C2AB62] mt-2 shadow-[0_0_8px_rgba(194,171,98,0.45)]" />
           </div>
         </div>
 
@@ -46,24 +46,24 @@ export default function HeroSection({ currentLang: propLang }: HeroSectionProps)
             </div>
 
             {/* Name Heading */}
-            <h1 className="font-serif text-[32px] sm:text-[36px] lg:text-[40px] font-normal text-[#121110] tracking-tight leading-[1.12]">
+            <h1 className="font-serif text-[36px] sm:text-[42px] lg:text-[46px] font-normal text-[#121110] tracking-tight leading-[1.12]">
               {isAr ? "ناتالي روزنبلوم" : "Nathalie Rosenblum"}
             </h1>
 
-            {/* Sub-headline in Warm Gold */}
-            <h2 className="font-serif text-[22px] sm:text-[25px] lg:text-[27px] font-normal text-[#9b6c28] tracking-normal mt-0.5 leading-[1.18]">
+            {/* Sub-headline in Exact Gold #C2AB62 */}
+            <h2 className="font-serif text-[22px] sm:text-[25px] lg:text-[27px] font-normal text-[#C2AB62] tracking-normal mt-0.5 leading-[1.18] drop-shadow-[0_1px_1px_rgba(255,255,255,0.5)]">
               {isAr ? "أخصائية نفسية مرخصة في دبي" : "Licensed Psychologist in Dubai"}
             </h2>
 
             {/* Qualifications / Credentials */}
             <div className="mt-2.5 mb-3.5 space-y-1 font-content text-[13px] sm:text-[13.5px] text-[#1c1a16] font-normal leading-snug">
+              <p className="font-medium text-[#9e8745]">
+                {isAr ? "الإنجليزية والعربية" : "English & Arabic"}
+              </p>
               <p>
                 {isAr
                   ? "أخصائية نفسية مرخصة من هيئة تنمية المجتمع في دبي (CDA)"
                   : "CDA Licensed Psychologist in Dubai"}
-              </p>
-              <p>
-                {isAr ? "الإنجليزية والعربية" : "English & Arabic"}
               </p>
               <p>
                 {isAr
@@ -102,15 +102,15 @@ export default function HeroSection({ currentLang: propLang }: HeroSectionProps)
 
           {/* Right Column: Portrait Photo & Expertise Box (Exact Proportions) */}
           <div className="lg:col-span-5 flex flex-col items-center lg:items-end w-full">
-            {/* Crisp Rectangular Portrait with Thin Gold Border */}
-            <div className="relative w-full max-w-[340px] sm:max-w-[365px] lg:max-w-[380px] aspect-[270/323] border border-[#c5a059] shadow-[0_4px_16px_rgba(0,0,0,0.12)] overflow-hidden">
+            {/* Crisp Rectangular Portrait with Exact #C2AB62 Gold Border */}
+            <div className="relative w-full max-w-[340px] sm:max-w-[365px] lg:max-w-[380px] aspect-[270/323] border border-[#C2AB62] shadow-[0_6px_24px_rgba(194,171,98,0.2)] overflow-hidden">
               <Image
                 src="/images/nathalie-exact-portrait.jpg"
                 alt="Nathalie Rosenblum - CDA Licensed Psychologist in Dubai"
                 fill
                 priority
                 sizes="(max-width: 768px) 100vw, 380px"
-                className="object-cover object-top"
+                className="object-cover object-[center_10%]"
               />
             </div>
 

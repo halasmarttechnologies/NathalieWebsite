@@ -251,7 +251,7 @@ export default function ServicesPage() {
               <div
                 key={srv.id}
                 id={srv.id}
-                className="p-8 sm:p-10 rounded-2xl bg-[#faf6ee]/95 backdrop-blur-md border border-[#c5a059] shadow-[0_12px_36px_rgba(150,120,70,0.12)] transition-all duration-300 hover:shadow-[0_16px_48px_rgba(150,120,70,0.2)]"
+                className="p-8 sm:p-10 rounded-2xl bg-[#f6f1ea]/95 backdrop-blur-md border border-[#c5a059] shadow-[0_12px_36px_rgba(150,120,70,0.12)] transition-all duration-300 hover:shadow-[0_16px_48px_rgba(150,120,70,0.2)]"
               >
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
                   {/* Left Column: Title & Description */}
@@ -281,7 +281,7 @@ export default function ServicesPage() {
                     </p>
 
                     {/* Duration / Format Badge */}
-                    <div className="inline-flex items-center space-x-2 rtl:space-x-reverse px-3.5 py-1.5 rounded-lg bg-[#f0e7d5] border border-[#c5a059]/30 text-xs font-serif text-[#524939]">
+                    <div className="inline-flex items-center space-x-2 rtl:space-x-reverse px-3.5 py-1.5 rounded-lg bg-[#ede6dc] border border-[#c5a059]/30 text-xs font-serif text-[#524939]">
                       <Clock className="w-3.5 h-3.5 text-[#936227]" />
                       <span>{isAr ? srv.durationAr : srv.durationEn}</span>
                     </div>
@@ -355,7 +355,7 @@ export default function ServicesPage() {
         </section>
 
         {/* Frequently Asked Questions */}
-        <section className="relative z-10 py-16 sm:py-20 px-4 sm:px-8 lg:px-12 bg-[#f6efe2]/90 border-y border-[#c5a059]/25">
+        <section className="relative z-10 py-16 sm:py-20 px-4 sm:px-8 lg:px-12 bg-[#f4efe8]/90 border-y border-[#c5a059]/25">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-10">
               <div className="inline-flex items-center space-x-1.5 rtl:space-x-reverse px-3.5 py-1 rounded-full bg-[#c5a059]/15 border border-[#c5a059]/35 mb-2.5">
@@ -389,7 +389,7 @@ export default function ServicesPage() {
                       />
                     </button>
                     {isOpen && (
-                      <div className="px-5 pb-5 pt-3 font-serif text-sm sm:text-[15px] leading-relaxed text-[#2c2822] bg-[#fdfcf9] border-t border-[#c5a059]/15">
+                      <div className="px-5 pb-5 pt-3 font-serif text-sm sm:text-[15px] leading-relaxed text-[#2c2822] bg-[#fbf9f6] border-t border-[#c5a059]/15">
                         {isAr ? faq.aAr : faq.aEn}
                       </div>
                     )}

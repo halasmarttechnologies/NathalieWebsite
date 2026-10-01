@@ -38,7 +38,7 @@ export default function BookingModal({
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/75 backdrop-blur-sm animate-in fade-in duration-200">
       <div
-        className="relative w-full max-w-xl bg-[#fbf8f2] border border-[#c5a059] rounded-2xl shadow-2xl p-6 sm:p-8 overflow-hidden text-[#2a2a2e]"
+        className="relative w-full max-w-xl bg-[#f8f3ec] border border-[#c5a059] rounded-2xl shadow-2xl p-6 sm:p-8 overflow-hidden text-[#2a2a2e]"
         dir={isAr ? "rtl" : "ltr"}
       >
         {/* Top Accent Gold Bar */}

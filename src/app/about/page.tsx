@@ -165,7 +165,7 @@ export default function AboutPage() {
               </div>
 
               {/* Right Narrative Content */}
-              <div className="lg:col-span-7 space-y-5 font-serif text-[15.5px] leading-[1.8] text-[#1f1d19] bg-[#faf6ee]/90 backdrop-blur-md p-7 sm:p-9 border border-[#c5a059]/60 shadow-[0_10px_30px_rgba(150,120,70,0.1)] rounded-xl">
+              <div className="lg:col-span-7 space-y-5 font-serif text-[15.5px] leading-[1.8] text-[#1f1d19] bg-[#f6f1ea]/90 backdrop-blur-md p-7 sm:p-9 border border-[#c5a059]/60 shadow-[0_10px_30px_rgba(150,120,70,0.1)] rounded-xl">
                 <h2 className="font-serif text-2xl sm:text-3xl text-[#121110] font-normal tracking-tight mb-3">
                   {isAr ? "رحلة ممتدة بين ثقافتين ورؤية إنسانية عميقة" : "Bridging Cultures & Healing Minds"}
                 </h2>
@@ -234,7 +234,7 @@ export default function AboutPage() {
         </section>
 
         {/* Evidence-Informed Modalities Grid */}
-        <section className="relative z-10 py-16 sm:py-20 px-4 sm:px-8 lg:px-12 bg-[#f6efe2]/80 border-b border-[#c5a059]/25">
+        <section className="relative z-10 py-16 sm:py-20 px-4 sm:px-8 lg:px-12 bg-[#f4efe8]/80 border-b border-[#c5a059]/25">
           <div className="max-w-[1180px] mx-auto">
             <div className="text-center max-w-2xl mx-auto mb-12">
               <span className="font-serif text-xs uppercase tracking-[0.25em] text-[#936227] font-semibold">

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Alex_Brush, Montserrat, Amiri } from "next/font/google";
+import { Cormorant_Garamond, Great_Vibes, Montserrat, Amiri } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 
@@ -11,8 +11,8 @@ const cormorant = Cormorant_Garamond({
   display: "swap",
 });
 
-const alexBrush = Alex_Brush({
-  variable: "--font-alex-brush",
+const greatVibes = Great_Vibes({
+  variable: "--font-great-vibes",
   subsets: ["latin"],
   weight: ["400"],
   display: "swap",
@@ -70,9 +70,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${cormorant.variable} ${alexBrush.variable} ${montserrat.variable} ${velmora.variable} ${amiri.variable} antialiased`}
+      className={`${cormorant.variable} ${greatVibes.variable} ${montserrat.variable} ${velmora.variable} ${amiri.variable} antialiased`}
     >
-      <body className="min-h-screen bg-[#f8f5ee] text-[#2a2a2e] font-sans selection:bg-[#c5a059]/30 selection:text-[#0b0c0e]">
+      <body className="min-h-screen bg-[#f6f1ea] text-[#2a2a2e] font-sans selection:bg-[#c5a059]/30 selection:text-[#0b0c0e]">
         <LanguageProvider>{children}</LanguageProvider>
       </body>
     </html>

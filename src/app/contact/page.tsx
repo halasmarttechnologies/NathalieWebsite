@@ -159,7 +159,7 @@ export default function ContactPage() {
               </div>
 
               {/* Arrival & Discretion Card */}
-              <div className="p-6 rounded-2xl bg-[#faf6ee]/90 border border-[#c5a059]/40 shadow-xs space-y-3 font-serif text-xs sm:text-sm text-[#443e34]">
+              <div className="p-6 rounded-2xl bg-[#f6f1ea]/90 border border-[#c5a059]/40 shadow-xs space-y-3 font-serif text-xs sm:text-sm text-[#443e34]">
                 <div className="flex items-center space-x-2 rtl:space-x-reverse text-[#936227] font-semibold">
                   <Car className="w-4 h-4" />
                   <span>{isAr ? "مواقف السيارات والوصول" : "Parking & Private Arrival"}</span>

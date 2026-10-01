@@ -22,7 +22,7 @@ export default function Home() {
 
   return (
     <main
-      className="relative min-h-screen w-full bg-[#f8f5ee] flex flex-col justify-between overflow-x-hidden"
+      className="relative min-h-screen w-full bg-[#f6f1ea] flex flex-col justify-between overflow-x-hidden"
       dir={currentLang === "ar" ? "rtl" : "ltr"}
     >
       {/* Full-width Landing Page Body */}
@@ -38,7 +38,7 @@ export default function Home() {
               priority
               sizes="100vw"
               className="object-cover object-top"
-              quality={100}
+              quality={98}
             />
           </div>
 
@@ -51,7 +51,7 @@ export default function Home() {
               priority
               sizes="100vw"
               className="object-cover object-top"
-              quality={100}
+              quality={98}
             />
           </div>
         </div>

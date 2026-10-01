@@ -297,7 +297,7 @@ Accurate diagnostic assessment brings immense relief, replacing decades of self-
       {selectedArticle && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/80 backdrop-blur-md animate-in fade-in">
           <div
-            className="relative w-full max-w-2xl max-h-[85vh] overflow-y-auto bg-[#faf6ee] border border-[#c5a059] rounded-2xl p-6 sm:p-9 shadow-2xl text-[#22201c]"
+            className="relative w-full max-w-2xl max-h-[85vh] overflow-y-auto bg-[#f6f1ea] border border-[#c5a059] rounded-2xl p-6 sm:p-9 shadow-2xl text-[#22201c]"
             dir={isAr ? "rtl" : "ltr"}
           >
             <button

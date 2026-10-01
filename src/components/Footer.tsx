@@ -18,7 +18,7 @@ export default function Footer({
   return (
     <footer
       id="contact"
-      className="relative z-20 w-full pt-14 pb-12 px-5 sm:px-8 lg:px-12 border-t border-[#c5a059]/35 bg-[#0b0c10] text-[#e2ded6]"
+      className="relative z-20 w-full pt-14 pb-12 px-5 sm:px-8 lg:px-12 border-t border-[#C2AB62]/35 bg-[#0b0c10] text-[#e2ded6]"
       dir={isAr ? "rtl" : "ltr"}
     >
       {/* Ambient background glow */}
@@ -29,18 +29,25 @@ export default function Footer({
           {/* Brand & Mission Column (5 cols) */}
           <div className="md:col-span-5 flex flex-col items-start">
             <h4
-              className={`text-2xl sm:text-[30px] text-[#ffffff] font-normal tracking-wide drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)] ${
-                isAr ? "font-serif text-[26px]" : "font-signature text-[32px] sm:text-[36px]"
+              className={`text-2xl sm:text-[32px] text-[#ffffff] font-normal tracking-wide drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)] ${
+                isAr ? "font-serif text-[28px] sm:text-[32px]" : "font-signature text-[36px] sm:text-[44px]"
               }`}
             >
               {isAr ? "ناتالي روزنبلوم" : "Nathalie Rosenblum"}
             </h4>
             <p
-              className={`text-[#e3ba6d] mt-1 mb-4 font-normal ${
+              className={`text-[#C2AB62] mt-1 font-normal ${
                 isAr ? "font-serif text-[15px]" : "font-content text-[12px] sm:text-[12.5px] uppercase tracking-[0.16em]"
               }`}
             >
               {isAr ? "أخصائية نفسية مرخصة في دبي" : "Licensed Psychologist in Dubai"}
+            </p>
+            <p
+              className={`text-[#eddba6]/85 mt-0.5 mb-4 font-normal ${
+                isAr ? "font-serif text-[13px]" : "font-content text-[11px] sm:text-[11.5px] uppercase tracking-[0.14em]"
+              }`}
+            >
+              {isAr ? "الإنجليزية والعربية" : "English & Arabic"}
             </p>
             <p className="font-content text-[13px] sm:text-[13.5px] leading-[1.75] text-[#d4cfc5] max-w-md font-normal">
               {isAr
@@ -49,9 +56,9 @@ export default function Footer({
             </p>
 
             {/* CDA License Verification Badge */}
-            <div className="mt-5 inline-flex items-center space-x-2.5 rtl:space-x-reverse px-3.5 py-2 rounded-md bg-[#161720] border border-[#c5a059]/40 shadow-sm">
-              <ShieldCheck className="w-4 h-4 text-[#e3ba6d] shrink-0" />
-              <span className="font-content text-[12.5px] sm:text-[13px] text-[#e5be70] tracking-wide">
+            <div className="mt-5 inline-flex items-center space-x-2.5 rtl:space-x-reverse px-3.5 py-2 rounded-md bg-[#161720] border border-[#C2AB62]/40 shadow-sm">
+              <ShieldCheck className="w-4 h-4 text-[#C2AB62] shrink-0" />
+              <span className="font-content text-[12.5px] sm:text-[13px] text-[#eddba6] tracking-wide">
                 {isAr
                   ? "مرخصة رسمياً من هيئة تنمية المجتمع في دبي (CDA)"
                   : "CDA Licensed Psychologist • Dubai, UAE"}
@@ -61,7 +68,7 @@ export default function Footer({
 
           {/* Navigation Links Column (3 cols) */}
           <div className="md:col-span-3">
-            <h5 className="font-content text-[13px] font-semibold text-[#ffffff] uppercase tracking-widest mb-4 pb-1 border-b border-[#c5a059]/25 inline-block">
+            <h5 className="font-content text-[13px] font-semibold text-[#ffffff] uppercase tracking-widest mb-4 pb-1 border-b border-[#C2AB62]/30 inline-block">
               {isAr ? "روابط سريعة" : "Navigation"}
             </h5>
             <ul className="space-y-2.5 font-content text-[13.5px] text-[#ded9cf]">
@@ -114,7 +121,7 @@ export default function Footer({
 
           {/* Clinic & Inquiries Column (4 cols) */}
           <div className="md:col-span-4">
-            <h5 className="font-content text-[13px] font-semibold text-[#ffffff] uppercase tracking-widest mb-4 pb-1 border-b border-[#c5a059]/25 inline-block">
+            <h5 className="font-content text-[13px] font-semibold text-[#ffffff] uppercase tracking-widest mb-4 pb-1 border-b border-[#C2AB62]/30 inline-block">
               {isAr ? "التواصل والعيادة" : "Clinic & Inquiries"}
             </h5>
             <ul className="space-y-3.5 font-content text-[13.5px] text-[#ded9cf]">
