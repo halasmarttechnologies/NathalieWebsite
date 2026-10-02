@@ -106,24 +106,24 @@ export default function Navbar({
 
         {/* Language Selector + Mobile Menu Trigger */}
         <div className="flex items-center space-x-3 rtl:space-x-reverse">
-          {/* Dual Pill Language Switcher */}
-          <div className="flex flex-col rounded-[3px] overflow-hidden border border-[#C2AB62]/70 shadow-[0_2px_8px_rgba(0,0,0,0.7)] w-[66px] sm:w-[70px] select-none">
+          {/* Dual Pill Language Switcher - Enlarged & High Readability */}
+          <div className="flex flex-col rounded-[6px] overflow-hidden border-[1.5px] border-[#C2AB62] shadow-[0_3px_12px_rgba(0,0,0,0.65)] w-[88px] sm:w-[98px] select-none">
             <button
               onClick={() => toggleLang("en")}
-              className={`py-1 text-center font-content text-[12px] tracking-wider transition-all duration-200 cursor-pointer ${
+              className={`py-1.5 sm:py-2 text-center font-content text-[13.5px] sm:text-[14.5px] tracking-wider transition-all duration-200 cursor-pointer ${
                 currentLang === "en"
                   ? "bg-gradient-to-b from-[#f3e5be] via-[#C2AB62] to-[#9e8745] text-[#121110] font-bold shadow-inner"
-                  : "bg-[#0e0f14] text-[#ded9ce] hover:text-[#C2AB62]"
+                  : "bg-[#0e0f14] text-[#ded9ce] hover:text-[#C2AB62] font-medium"
               }`}
             >
               English
             </button>
             <button
               onClick={() => toggleLang("ar")}
-              className={`py-1 text-center font-content text-[12px] tracking-wider border-t border-[#C2AB62]/40 transition-all duration-200 cursor-pointer ${
+              className={`py-1.5 sm:py-2 text-center font-content text-[13.5px] sm:text-[14.5px] tracking-wider border-t border-[#C2AB62]/50 transition-all duration-200 cursor-pointer ${
                 currentLang === "ar"
                   ? "bg-gradient-to-b from-[#f3e5be] via-[#C2AB62] to-[#9e8745] text-[#121110] font-bold shadow-inner"
-                  : "bg-[#0a0b0f] text-[#ded9ce] hover:text-[#C2AB62]"
+                  : "bg-[#0a0b0f] text-[#ded9ce] hover:text-[#C2AB62] font-medium"
               }`}
             >
               العربية

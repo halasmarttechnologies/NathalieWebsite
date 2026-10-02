@@ -56,24 +56,24 @@ export default function HeroSection({ currentLang: propLang }: HeroSectionProps)
             </h2>
 
             {/* Qualifications / Credentials */}
-            <div className="mt-2.5 mb-3.5 space-y-1 font-content text-[13px] sm:text-[13.5px] text-[#1c1a16] font-normal leading-snug">
-              <p className="font-medium text-[#9e8745]">
+            <div className="mt-3 mb-5 space-y-1.5 font-content text-[15px] sm:text-[16px] text-[#1c1a16] font-normal leading-relaxed">
+              <div className="inline-flex items-center px-3.5 py-1.5 rounded-[5px] bg-[#C2AB62]/15 border border-[#C2AB62]/60 text-[#8a722f] font-semibold text-[14px] sm:text-[15px] tracking-wide mb-1 select-none shadow-sm">
                 {isAr ? "الإنجليزية والعربية" : "English & Arabic"}
-              </p>
-              <p>
+              </div>
+              <p className="font-semibold text-[#121110]">
                 {isAr
                   ? "أخصائية نفسية مرخصة من هيئة تنمية المجتمع في دبي (CDA)"
                   : "CDA Licensed Psychologist in Dubai"}
               </p>
-              <p>
+              <p className="text-[#3a352e]">
                 {isAr
                   ? "معالجة نفسية | استشارية زواج | معالجة أسرية"
                   : "Psychotherapist | Marriage Counselor | Family Therapist"}
               </p>
             </div>
 
-            {/* Biography Paragraphs - Editorial Prose in Montserrat */}
-            <div className="space-y-3.5 font-content text-[13px] sm:text-[13.5px] leading-[1.72] text-[#22201b] text-left rtl:text-right font-normal">
+            {/* Biography Paragraphs - Exact CHMC Style & Font Size (16px Montserrat, generous line height) */}
+            <div className="space-y-4 font-content text-[15.5px] sm:text-[16px] leading-[1.72] text-[#1c1a16] text-left rtl:text-right font-normal">
               <p>
                 {isAr
                   ? "نشأت ناتالي روزنبلوم متأثرة بجذورها الأوروبية والشرق أوسطية ضمن النسيج الثقافي للتقاليد العربية والحياة الأسرية. واصلت لاحقاً تعليمها وتدريبها الإكلينيكي في أمريكا الشمالية، حيث حصلت على درجة الماجستير في علم النفس الإكلينيكي من جامعة كابيلا في مينيسوتا بالولايات المتحدة الأمريكية، ومعترف بها من قبل الجمعية الأمريكية لعلم النفس (APA). ناتالي أيضاً عضو في الجمعية الكندية للإرشاد والعلاج النفسي (CCPA)."
@@ -103,19 +103,19 @@ export default function HeroSection({ currentLang: propLang }: HeroSectionProps)
           {/* Right Column: Portrait Photo & Expertise Box (Exact Proportions) */}
           <div className="lg:col-span-5 flex flex-col items-center lg:items-end w-full">
             {/* Crisp Rectangular Portrait with Exact #C2AB62 Gold Border */}
-            <div className="relative w-full max-w-[340px] sm:max-w-[365px] lg:max-w-[380px] aspect-[270/323] border border-[#C2AB62] shadow-[0_6px_24px_rgba(194,171,98,0.2)] overflow-hidden">
+            <div className="relative w-full max-w-[340px] sm:max-w-[375px] lg:max-w-[390px] aspect-[270/335] border border-[#C2AB62] shadow-[0_6px_24px_rgba(194,171,98,0.22)] overflow-hidden">
               <Image
                 src="/images/nathalie-exact-portrait.jpg"
                 alt="Nathalie Rosenblum - CDA Licensed Psychologist in Dubai"
                 fill
                 priority
-                sizes="(max-width: 768px) 100vw, 380px"
-                className="object-cover object-[center_10%]"
+                sizes="(max-width: 768px) 100vw, 390px"
+                className="object-cover object-[center_12%]"
               />
             </div>
 
             {/* Expertise Box Directly Below Portrait with Same Exact Width */}
-            <div className="w-full max-w-[340px] sm:max-w-[365px] lg:max-w-[380px] mt-3 sm:mt-3.5">
+            <div className="w-full max-w-[340px] sm:max-w-[375px] lg:max-w-[390px] mt-3 sm:mt-3.5">
               <ExpertiseCard currentLang={isAr ? "ar" : "en"} />
             </div>
           </div>
