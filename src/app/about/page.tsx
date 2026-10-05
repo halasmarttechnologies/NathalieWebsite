@@ -145,14 +145,14 @@ export default function AboutPage() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
               {/* Left Portrait Frame */}
               <div className="lg:col-span-5 flex justify-center lg:justify-start">
-                <div className="relative w-full max-w-[390px] aspect-[274/330] p-2.5 bg-[#0c0d12] border-2 border-[#c5a059] shadow-[0_16px_40px_rgba(0,0,0,0.5)]">
+                <div className="relative w-full max-w-[350px] aspect-[274/330] p-2.5 bg-[#0c0d12] border-2 border-[#c5a059] shadow-[0_16px_40px_rgba(0,0,0,0.5)]">
                   <div className="relative w-full h-full border border-[#c5a059]/50 overflow-hidden">
                     <Image
                       src="/images/nathalie-rosenblum.jpg"
                       alt="Nathalie Rosenblum Licensed Clinical Psychologist Dubai"
                       fill
                       priority
-                      sizes="(max-width: 768px) 100vw, 390px"
+                      sizes="(max-width: 768px) 100vw, 350px"
                       className="object-cover object-top"
                     />
                   </div>

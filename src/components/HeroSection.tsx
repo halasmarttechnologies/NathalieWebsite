@@ -103,19 +103,19 @@ export default function HeroSection({ currentLang: propLang }: HeroSectionProps)
           {/* Right Column: Portrait Photo & Expertise Box (Exact Proportions) */}
           <div className="lg:col-span-5 flex flex-col items-center lg:items-end w-full">
             {/* Crisp Rectangular Portrait with Exact #C2AB62 Gold Border */}
-            <div className="relative w-full max-w-[340px] sm:max-w-[375px] lg:max-w-[390px] aspect-[270/335] border border-[#C2AB62] shadow-[0_6px_24px_rgba(194,171,98,0.22)] overflow-hidden">
+            <div className="relative w-full max-w-[300px] sm:max-w-[335px] lg:max-w-[350px] aspect-[270/335] border border-[#C2AB62] shadow-[0_6px_24px_rgba(194,171,98,0.22)] overflow-hidden">
               <Image
                 src="/images/nathalie-exact-portrait.jpg"
                 alt="Nathalie Rosenblum - CDA Licensed Psychologist in Dubai"
                 fill
                 priority
-                sizes="(max-width: 768px) 100vw, 390px"
+                sizes="(max-width: 768px) 100vw, 350px"
                 className="object-cover object-[center_12%]"
               />
             </div>
 
             {/* Expertise Box Directly Below Portrait with Same Exact Width */}
-            <div className="w-full max-w-[340px] sm:max-w-[375px] lg:max-w-[390px] mt-3 sm:mt-3.5">
+            <div className="w-full max-w-[300px] sm:max-w-[335px] lg:max-w-[350px] mt-3 sm:mt-3.5">
               <ExpertiseCard currentLang={isAr ? "ar" : "en"} />
             </div>
           </div>
