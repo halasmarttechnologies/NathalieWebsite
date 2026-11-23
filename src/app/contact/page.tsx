@@ -109,27 +109,20 @@ export default function ContactPage() {
                         {isAr
                           ? "الاثنين - السبت: 8:00 صباحاً - 6:00 مساءً"
                           : "Monday – Saturday: 8:00 AM – 6:00 PM"}
-                      </span>
-                    </div>
+                      </span>                    </div>
                   </li>
 
                   <li className="flex items-start space-x-3.5 rtl:space-x-reverse">
                     <Phone className="w-5 h-5 text-[#936227] shrink-0 mt-0.5" />
                     <div>
                       <strong className="block text-[#121110] font-semibold">
-                        {isAr ? "الهاتف والواتساب المباشر" : "Telephone & Direct WhatsApp"}
+                        {isAr ? "الهاتف" : "Telephone"}
                       </strong>
                       <a
                         href="tel:+97144574240"
-                        className="block hover:text-[#936227] transition-colors"
+                        className="block hover:text-[#936227] transition-colors font-semibold"
                       >
-                        +971 4 457 4240
-                      </a>
-                      <a
-                        href="mailto:office@chmc-dubai.com"
-                        className="text-[#936227] font-semibold hover:underline block mt-0.5"
-                      >
-                        office@chmc-dubai.com
+                        971 4 4574240
                       </a>
                     </div>
                   </li>
@@ -138,11 +131,11 @@ export default function ContactPage() {
                     <Mail className="w-5 h-5 text-[#936227] shrink-0 mt-0.5" />
                     <div>
                       <strong className="block text-[#121110] font-semibold">
-                        {isAr ? "البريد الإلكتروني السري" : "Confidential Email"}
+                        {isAr ? "البريد الإلكتروني" : "Email"}
                       </strong>
                       <a
                         href="mailto:office@chmc-dubai.com"
-                        className="hover:text-[#936227] transition-colors"
+                        className="hover:text-[#936227] transition-colors font-semibold"
                       >
                         office@chmc-dubai.com
                       </a>
@@ -154,12 +147,10 @@ export default function ContactPage() {
                 <div className="pt-2">
                   <a
                     href="tel:+97144574240"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full py-3 rounded-xl bg-[#1d8a4e] hover:bg-[#187542] text-white font-serif font-semibold text-sm shadow-md transition-all flex items-center justify-center space-x-2 rtl:space-x-reverse"
+                    className="w-full py-3 rounded-xl bg-[#c5a059] hover:bg-[#a8893d] text-white font-serif font-semibold text-sm shadow-md transition-all flex items-center justify-center space-x-2 rtl:space-x-reverse"
                   >
-                    <MessageCircle className="w-4 h-4" />
-                    <span>{isAr ? "اتصل بنا مباشرة" : "Call Us Directly"}</span>
+                    <Phone className="w-4 h-4" />
+                    <span>{isAr ? "اتصل بنا: 971 4 4574240" : "Call: 971 4 4574240"}</span>
                   </a>
                 </div>
               </div>
