@@ -7,6 +7,7 @@ import HeroSection from "@/components/HeroSection";
 import ServiceCards from "@/components/ServiceCards";
 import BookingModal from "@/components/BookingModal";
 import Footer from "@/components/Footer";
+import MyStorySection from "@/components/MyStorySection";
 
 export default function Home() {
   const [currentLang, setCurrentLang] = useState<"en" | "ar">("en");
@@ -70,6 +71,9 @@ export default function Home() {
         <div className="relative z-10 flex-grow w-full">
           <HeroSection currentLang={currentLang} />
         </div>
+
+        {/* My Story Section */}
+        <MyStorySection currentLang={currentLang} />
 
         {/* Three Pillar Service Cards */}
         <div className="relative z-10 w-full mb-6 sm:mb-10">

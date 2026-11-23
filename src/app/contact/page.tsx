@@ -85,9 +85,17 @@ export default function ContactPage() {
                       </strong>
                       <span>
                         {isAr
-                          ? "مدينة دبي الطبية / مبنى العيادات الخاصة، جميرا، دبي، الإمارات العربية المتحدة"
-                          : "Dubai Healthcare City & Jumeirah Specialist Clinics, Dubai, United Arab Emirates"}
+                          ? "مركز HDS للأعمال، أبراج بحيرات جميرا (JLT)، كلاستر M، الطابق العاشر، وحدة 1004، دبي، الإمارات العربية المتحدة"
+                          : "Jumeirah Lakes Towers (JLT) — HDS Business Centre, Cluster M, 10th Floor, Unit 1004, Dubai, UAE"}
                       </span>
+                      <a
+                        href="https://chmc-dubai.com/contact/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-1 block text-[#936227] hover:underline text-xs"
+                      >
+                        {isAr ? "انقر هنا لخريطة الموقع: فرع JLT" : "Click here for location map: JLT"}
+                      </a>
                     </div>
                   </li>
 
@@ -99,8 +107,8 @@ export default function ContactPage() {
                       </strong>
                       <span>
                         {isAr
-                          ? "الاثنين - الجمعة: 9:00 صباحاً - 8:00 مساءً | السبت: حسب الموعد المسبق"
-                          : "Monday – Friday: 9:00 AM – 8:00 PM | Saturday: By Prior Appointment"}
+                          ? "الاثنين - السبت: 8:00 صباحاً - 6:00 مساءً"
+                          : "Monday – Saturday: 8:00 AM – 6:00 PM"}
                       </span>
                     </div>
                   </li>
@@ -112,18 +120,16 @@ export default function ContactPage() {
                         {isAr ? "الهاتف والواتساب المباشر" : "Telephone & Direct WhatsApp"}
                       </strong>
                       <a
-                        href="tel:+97140000000"
+                        href="tel:+97144574240"
                         className="block hover:text-[#936227] transition-colors"
                       >
-                        +971 4 000 0000 (Reception)
+                        +971 4 457 4240
                       </a>
                       <a
-                        href="https://wa.me/97150000000"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        href="mailto:office@chmc-dubai.com"
                         className="text-[#936227] font-semibold hover:underline block mt-0.5"
                       >
-                        WhatsApp: +971 50 000 0000
+                        office@chmc-dubai.com
                       </a>
                     </div>
                   </li>
@@ -135,10 +141,10 @@ export default function ContactPage() {
                         {isAr ? "البريد الإلكتروني السري" : "Confidential Email"}
                       </strong>
                       <a
-                        href="mailto:contact@nathalierosenblum.com"
+                        href="mailto:office@chmc-dubai.com"
                         className="hover:text-[#936227] transition-colors"
                       >
-                        contact@nathalierosenblum.com
+                        office@chmc-dubai.com
                       </a>
                     </div>
                   </li>
@@ -147,13 +153,13 @@ export default function ContactPage() {
                 {/* WhatsApp Quick Action Button */}
                 <div className="pt-2">
                   <a
-                    href="https://wa.me/97150000000"
+                    href="tel:+97144574240"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full py-3 rounded-xl bg-[#1d8a4e] hover:bg-[#187542] text-white font-serif font-semibold text-sm shadow-md transition-all flex items-center justify-center space-x-2 rtl:space-x-reverse"
                   >
                     <MessageCircle className="w-4 h-4" />
-                    <span>{isAr ? "محادثة فورية عبر واتساب" : "Chat on WhatsApp Directly"}</span>
+                    <span>{isAr ? "اتصل بنا مباشرة" : "Call Us Directly"}</span>
                   </a>
                 </div>
               </div>

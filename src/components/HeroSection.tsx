@@ -16,7 +16,7 @@ export default function HeroSection({ currentLang: propLang }: HeroSectionProps)
   return (
     <section
       id="home"
-      className="relative z-10 w-full pt-20 sm:pt-24 md:pt-16 lg:pt-20 pb-4 px-4 sm:px-8 lg:px-12"
+      className={`relative z-10 w-full pb-4 px-4 sm:px-8 lg:px-12 ${isAr ? "pt-28 sm:pt-32 md:pt-24 lg:pt-28" : "pt-20 sm:pt-24 md:pt-16 lg:pt-20"}`}
       dir={isAr ? "rtl" : "ltr"}
     >
       <div className="max-w-[1240px] mx-auto">
@@ -110,7 +110,7 @@ export default function HeroSection({ currentLang: propLang }: HeroSectionProps)
                 fill
                 priority
                 sizes="(max-width: 768px) 100vw, 350px"
-                className="object-cover object-[center_12%]"
+                className="object-cover object-[center_top]"
               />
             </div>
 
