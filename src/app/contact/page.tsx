@@ -94,7 +94,7 @@ export default function ContactPage() {
                         rel="noopener noreferrer"
                         className="mt-1 block text-[#936227] hover:underline text-xs"
                       >
-                        {isAr ? "انقر هنا لخريطة الموقع: فرع JLT" : "Click here for location map: JLT"}
+                        {isAr ? "انقر هنا لخريطة الموقع: JLT" : "Click here for location map: JLT"}
                       </a>
                     </div>
                   </li>

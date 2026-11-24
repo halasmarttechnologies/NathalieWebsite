@@ -129,26 +129,46 @@ export default function Footer({
                 <MapPin className="w-4 h-4 text-[#e3ba6d] shrink-0 mt-1" />
                 <span className="leading-relaxed">
                   {isAr
-                    ? "مدينة دبي الطبية / جميرا، دبي، الإمارات العربية المتحدة"
-                    : "Dubai Healthcare City / Jumeirah, Dubai, United Arab Emirates"}
+                    ? "مركز HDS للأعمال، أبراج بحيرات جميرا (JLT)، كلاستر M، الطابق العاشر، وحدة 1004، دبي، الإمارات العربية المتحدة"
+                    : "Jumeirah Lakes Towers, HDS Business Centre, Cluster M, 10th Floor, Unit 1004, Dubai, UAE"}
                 </span>
               </li>
               <li className="flex items-center space-x-3 rtl:space-x-reverse">
                 <Phone className="w-4 h-4 text-[#e3ba6d] shrink-0" />
                 <a
-                  href="tel:+97140000000"
+                  href="tel:+97144574240"
                   className="hover:text-[#e3ba6d] transition-colors tracking-wide"
                 >
-                  +971 4 000 0000 / WhatsApp: +971 50 000 0000
+                  971 4 4574240
                 </a>
               </li>
               <li className="flex items-center space-x-3 rtl:space-x-reverse">
                 <Mail className="w-4 h-4 text-[#e3ba6d] shrink-0" />
                 <a
-                  href="mailto:contact@nathalierosenblum.com"
+                  href="mailto:office@chmc-dubai.com"
                   className="hover:text-[#e3ba6d] transition-colors"
                 >
-                  contact@nathalierosenblum.com
+                  office@chmc-dubai.com
+                </a>
+              </li>
+              <li className="flex items-center space-x-3 rtl:space-x-reverse">
+                <svg className="w-4 h-4 text-[#e3ba6d] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="10" strokeWidth="1.5"/>
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M12 6v6l4 2"/>
+                </svg>
+                <span>
+                  {isAr ? "الاثنين – السبت: 8 صباحاً – 6 مساءً" : "Monday – Saturday: 8am – 6pm"}
+                </span>
+              </li>
+              <li className="flex items-center space-x-3 rtl:space-x-reverse pt-1">
+                <a
+                  href="https://chmc-dubai.com/contact/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#e3ba6d] hover:underline text-[12.5px] flex items-center space-x-1 rtl:space-x-reverse"
+                >
+                  <span>{isAr ? "انقر هنا لخريطة الموقع: JLT" : "Click here for location map: JLT"}</span>
+                  <ArrowUpRight className="w-3 h-3" />
                 </a>
               </li>
             </ul>
